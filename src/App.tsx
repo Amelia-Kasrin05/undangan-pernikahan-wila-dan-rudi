@@ -58,15 +58,15 @@ function App() {
           element={
             <>
               <Helmet>
-                <meta property="og:title" content="The Wedding Of Hikmah and Uji" />
-                <meta property="og:description" content="06 September 2025" />
+                <meta property="og:title" content="The Wedding Of Wila and Rudi" />
+                <meta property="og:description" content="21 September 2025" />
                 <meta property="og:image" content="/images/welcome.jpg" />
                 <meta property="og:image:alt" content="The image is an image of the bride" />
                 <meta property="og:image:type" content="image/jpg" />
                 <meta property="og:image:width" content="1080" />
                 <meta property="og:image:height" content="1080" />
                 <meta property="og:type" content="website" />
-                <meta property="og:site_name" content="Uji & Hikmah" />
+                <meta property="og:site_name" content="Wila & Rudi" />
                 <meta property="og:url" content="https://undangan-pernikahan-hikmah-dan-uji.vercel.app/" />
                 <meta http-equiv="cache-control" content="no-cache" />
                 <meta http-equiv="pragma" content="no-cache" />

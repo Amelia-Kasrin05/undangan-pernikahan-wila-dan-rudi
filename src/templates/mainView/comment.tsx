@@ -91,7 +91,7 @@ export default function Comment({ refComment, name }: { refComment: any; name?: 
 
     const userCommented = comments.some((existingComment) => existingComment.name === formName);
 
-    if (userCommented && name !== "@hikmahnuji_admin") {
+    if (userCommented && name !== "@wilanrudi_admin") {
       return toast.error("Anda sudah memberikan ucapan dan doa restu");
     }
 
@@ -168,7 +168,7 @@ export default function Comment({ refComment, name }: { refComment: any; name?: 
           name="comment"
           type="text"
           placeholder="Tulis ucapan & doa restu"
-          disabled={name === "@hikmahnuji_admin"}
+          disabled={name === "@wilanrudi_admin"}
           value={commentInput}
           onChange={(e) => setCommentInput(e.target.value)}
           className="border p-2 bg-gray-200 outline-none"
@@ -185,7 +185,7 @@ export default function Comment({ refComment, name }: { refComment: any; name?: 
             name={comment?.name || ""}
             comment={comment?.comment || ""}
             date={comment?.update_at || comment?.created_at || { seconds: 0, nanoseconds: 0 }}
-            admin={name === "@hikmahnuji_admin"}
+            admin={name === "@wilanrudi_admin"}
             user={name === comment?.name}
             handleDeleteComment={handleDeleteComment}
             getComments={getComments}

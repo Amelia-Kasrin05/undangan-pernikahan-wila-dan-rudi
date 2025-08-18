@@ -9,7 +9,7 @@ export default function StartAnimation() {
       delay: 2.3,
     })
       .from(
-        "#uji",
+        "#rudi",
         {
           x: "-=50",
           opacity: 0,
@@ -28,7 +28,7 @@ export default function StartAnimation() {
         "<"
       )
       .from(
-        "#hikmah",
+        "#wila",
         {
           x: "+=50",
           opacity: 0,

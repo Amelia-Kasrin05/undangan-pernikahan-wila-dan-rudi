@@ -79,7 +79,7 @@ button {
 }
 
 /* Animasi sederhana tanpa particle effects */
-.uji-animate {
+.Rudi-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
 }
@@ -89,7 +89,7 @@ button {
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
 }
 
-.hikmah-animate {
+.Wila-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
 }
@@ -236,15 +236,15 @@ input[type="number"] {
 /* Optimasi Performa untuk Scroll dan Animasi */
 
 /* Gunakan GPU acceleration untuk elemen yang beranimasi */
-.uji-animate,
+.rudi-animate,
 .dan-animate,
-.hikmah-animate {
+.wila-animate {
   opacity: 0;
   will-change: opacity, transform;
   transform: translate3d(0, 0, 0); /* Force GPU layer */
 }
 
-.uji-animate {
+.rudi-animate {
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
 }
 
@@ -252,7 +252,7 @@ input[type="number"] {
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
 }
 
-.hikmah-animate {
+.wila-animate {
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
 }
 
@@ -276,14 +276,14 @@ img {
 
 /* Reduce motion untuk user yang prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .uji-animate,
+  .rudi-animate,
   .dan-animate,
-  .hikmah-animate {
+  .wila-animate {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
-  
+
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -296,7 +296,7 @@ img {
   contain: layout style paint;
 }
 
-/* Sembunyikan div dengan class font-preload yang berisi "Hikmah & Uji" */
+/* Sembunyikan div dengan class font-preload yang berisi "Wila & Rudi" */
 .font-preload {
   display: none !important;
 }

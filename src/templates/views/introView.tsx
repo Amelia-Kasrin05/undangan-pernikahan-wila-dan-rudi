@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Uji from "../../assets/uji"
-import Hikmah from "../../assets/hikmah"
-import Dan from "../../assets/dan"
-import { motion } from "framer-motion"
+import Rudi from "../../assets/rudi";
+import Wila from "../../assets/wila";
+import Dan from "../../assets/dan";
+import { motion } from "framer-motion";
 
 export default function IntroView() {
   return (
@@ -18,8 +18,8 @@ export default function IntroView() {
     >
       <div className="absolute max-w-xl w-full p-5 h-[100dvh] flex flex-col justify-center">
         <div className="relative h-[100dvh] flex flex-col justify-center items-center gap-6">
-          {/* Animasi Uji - muncul pertama dengan smooth animation */}
- <motion.div
+          {/* Animasi  - muncul pertama dengan smooth animation */}
+          <motion.div
             className="w-full max-w-[300px] flex justify-center"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
             animate={{
@@ -29,11 +29,11 @@ export default function IntroView() {
               transition: {
                 duration: 1.2,
                 delay: 0.5,
-                ease: [0.25, 0.46, 0.45, 0.94], 
+                ease: [0.25, 0.46, 0.45, 0.94],
               },
             }}
           >
-            <Hikmah />
+            <Wila />
           </motion.div>
 
           {/* Animasi Dan - muncul kedua dengan bounce effect */}
@@ -52,14 +52,14 @@ export default function IntroView() {
                   type: "spring",
                   stiffness: 260,
                   damping: 20,
-                }
+                },
               },
             }}
           >
             <Dan />
           </motion.div>
 
-          {/* Animasi Hikmah - muncul terakhir dengan elegant slide */}
+          {/* Animasi Wila - muncul terakhir dengan elegant slide */}
           <motion.div
             className="w-full max-w-[300px] flex justify-center"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
@@ -70,14 +70,14 @@ export default function IntroView() {
               transition: {
                 duration: 1.2,
                 delay: 2.8,
-                ease: [0.25, 0.46, 0.45, 0.94], // matching easing dengan Uji
+                ease: [0.25, 0.46, 0.45, 0.94], // matching easing dengan Rudi
               },
             }}
           >
-            <Uji />
+            <Rudi />
           </motion.div>
         </div>
       </div>
     </motion.div>
-  )
+  );
 }

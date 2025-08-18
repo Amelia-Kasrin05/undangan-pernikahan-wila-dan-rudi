@@ -18,7 +18,7 @@ export default function RsvpAdmin() {
   const [search, setSearch] = useState("");
   const [rsvpData, setRsvpData] = useState<rsvp[]>([]);
 
-  if (name !== "@hikmahnuji_admin") {
+  if (name !== "@wilanrudi_admin") {
     return <Navigate to="/" />;
   }
 
@@ -30,7 +30,7 @@ export default function RsvpAdmin() {
     return typeof obj === "object" && "id" in obj && "name" in obj && "presence" in obj;
   }
   const getRsvpData = async () => {
-    if (name !== "@hikmahnuji_admin") {
+    if (name !== "@wilahnrudi_admin") {
       return <Navigate to="/" />;
     }
 

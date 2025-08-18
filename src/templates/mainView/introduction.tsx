@@ -36,7 +36,7 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
     seconds: 0,
   });
 
-  const countdownDate = new Date("September 06, 2025 09:00:00").getTime();
+  const countdownDate = new Date("September 21, 2025 08:00:00").getTime();
 
   // FIX: Pindahkan interval ke useEffect dan bersihkan
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
     <MainLayout>
       <div ref={mergedRef} className="relative flex justify-center items-center w-full max-w-[350px] -my-10">
         <div className={`bismillah-overlay absolute w-full h-20 bg-white origin-right transition-transform duration-700 delay-200 ${bismillah.isVisible ? "scale-x-0" : "scale-x-100"}`} />
-       <img src="/bismillah.png" alt="bismillah" loading="lazy" />
+        <img src="/bismillah.png" alt="bismillah" loading="lazy" />
       </div>
 
       <div className="text-center flex flex-col items-center px-4">
@@ -85,12 +85,12 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
         <p className="text-gray-600 mb-6">Kami yang berbahagia,</p>
 
         {/* Simplified Profile Cards - No complex refs */}
-        <ProfileCard name="Hikmah Suciani, S.Pd ,Gr" desc="Putri Pertama dari Bapak Mufrinal, S.Pd.I dan Ibu Kasmaweni" instagramLink="https://www.instagram.com/hikmahsucianii?igsh=MTd5YWU4YTFzN21sdw==" />
+        <ProfileCard name="wila novita sari,AM.d" desc="Anak ke 1 putri tunggal dari Bapak Jusrul(alm) dan Ibu Desmaini" />
 
-        <ProfileCard name="Uji Purnomo Aji, S.P" desc="Putra Ketiga dari Bapak Suyadi dan Ibu Sugiyanti" instagramLink="https://www.instagram.com/sajakataji?igsh=MTFhZTlycDRtZng2OQ==" />
+        <ProfileCard name="Rudi Mardiansah" desc="Anak ke 2 putra dari Bapak Hamdaniwal dan Ibu Lina fitri yeni" />
 
         <footer className="mx-5 mt-10 flex flex-col gap-10">
-          <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-medium">Sabtu, 06 September 2025</p>
+          <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-medium">Minggu, 21 September 2025</p>
 
           <div ref={countdown.ref} className="flex gap-3 justify-center">
             <CountdownCard isInView={countdown.isVisible} num={time.days} desc="Days" />

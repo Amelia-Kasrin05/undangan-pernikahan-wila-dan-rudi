@@ -37,7 +37,7 @@ export default function LoveStory({ refLoveStory }: { refLoveStory: any }) {
       year: "2025",
       title: "Hari Bahagia",
       content:
-        "Tibalah hari yang kami nantikan, 6 September 2025, hari dimana kami memulai babak baru. Bukan lagi sekadar aku dan kamu, tetapi kita. Bukan hanya kisah cinta, tetapi janji seumur hidup, hingga surga. Inilah cerita kami, yang kini berlanjut menjadi ikatan suci.",
+        "Tibalah hari yang kami nantikan, 21 September 2025, hari dimana kami memulai babak baru. Bukan lagi sekadar aku dan kamu, tetapi kita. Bukan hanya kisah cinta, tetapi janji seumur hidup, hingga surga. Inilah cerita kami, yang kini berlanjut menjadi ikatan suci.",
     },
   ];
 

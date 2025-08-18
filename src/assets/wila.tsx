@@ -1,4 +1,4 @@
-export default function Hikmah({ className = "hikmah", color = "#986a52" }: { className?: string; color?: string }) {
+export default function Wila({ className = "wila", color = "#986a52" }: { className?: string; color?: string }) {
   return (
     <div className={`${className} text-center flex justify-center items-center w-full`}>
       <h2
@@ -13,7 +13,7 @@ export default function Hikmah({ className = "hikmah", color = "#986a52" }: { cl
           MozOsxFontSmoothing: "grayscale", // smooth font di firefox
         }}
       >
-        Hikmah
+        Wila
       </h2>
     </div>
   );

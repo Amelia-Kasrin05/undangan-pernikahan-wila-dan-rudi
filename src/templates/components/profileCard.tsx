@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 export default function ProfileCard({ name, desc, instagramLink }: { name: string; desc: string; instagramLink?: string }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const isFemale = name.includes("Hikmah");
+  const isFemale = name.includes("Wila");
 
   useEffect(() => {
     const observer = new IntersectionObserver(

@@ -1,6 +1,6 @@
 "use client";
 
-export default function Uji({ className = "uji", color = "#986a52" }: { className?: string; color?: string }) {
+export default function Rudi({ className = "rudi", color = "#986a52" }: { className?: string; color?: string }) {
   return (
     <div className={`${className} text-center flex justify-center items-center w-full`}>
       <h2
@@ -15,7 +15,7 @@ export default function Uji({ className = "uji", color = "#986a52" }: { classNam
           MozOsxFontSmoothing: "grayscale", // smooth font di firefox
         }}
       >
-        Uji
+        Rudi
       </h2>
     </div>
   );
