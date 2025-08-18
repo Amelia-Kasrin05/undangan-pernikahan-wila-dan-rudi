@@ -1,0 +1,302 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FORCE LIGHT MODE - SIMPLIFIED */
+html {
+  color-scheme: light only !important;
+  -webkit-color-scheme: light only !important;
+  background-color: #ffffff !important;
+}
+
+body {
+  font-family: "Comic Neue", cursive;
+  color-scheme: light only !important;
+  -webkit-color-scheme: light only !important;
+  background-color: #ffffff !important;
+}
+
+/* Override khusus untuk dark mode */
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light only !important;
+    -webkit-color-scheme: light only !important;
+    background-color: #ffffff !important;
+  }
+
+  body {
+    color-scheme: light only !important;
+    -webkit-color-scheme: light only !important;
+    background-color: #ffffff !important;
+  }
+
+  /* Pastikan warna Tailwind tetap konsisten */
+  .bg-white {
+    background-color: #ffffff !important;
+  }
+
+  .text-black {
+    color: #000000 !important;
+  }
+
+  .text-gray-700 {
+    color: #374151 !important;
+  }
+
+  .text-gray-600 {
+    color: #4b5563 !important;
+  }
+
+  .text-gray-500 {
+    color: #6b7280 !important;
+  }
+
+  .text-gray-400 {
+    color: #9ca3af !important;
+  }
+
+  .text-blue-400 {
+    color: #60a5fa !important;
+  }
+}
+
+/* Override untuk input dan form elements */
+input,
+textarea,
+select,
+button {
+  color-scheme: light only !important;
+  -webkit-color-scheme: light only !important;
+}
+
+/* Override untuk scrollbar */
+::-webkit-scrollbar {
+  background-color: #ffffff !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #cccccc !important;
+}
+
+/* Animasi sederhana tanpa particle effects */
+.uji-animate {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 0.5s forwards;
+}
+
+.dan-animate {
+  opacity: 0;
+  animation: fadeInScale 0.8s ease-out 1.8s forwards;
+}
+
+.hikmah-animate {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease-out 2.5s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 4500;
+    stroke-width: 0px;
+  }
+  10% {
+    stroke-width: 1.5px;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    stroke-width: 1.5px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-blue-300;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white rounded-full;
+}
+
+.comment-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comment-scrollbar::-webkit-scrollbar-track {
+  @apply bg-white;
+}
+.comment-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-blue-300;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@font-face {
+  font-family: GreatVibes-Regular;
+  src: url(/fonts/GreatVibes-Regular.ttf);
+}
+@font-face {
+  font-family: Besley-VariableFont_wght;
+  src: url(/fonts/Besley-VariableFont_wght.ttf);
+}
+
+.besley-10 {
+  font-weight: 300;
+  font-size: 15px;
+  font-family: Besley-VariableFont_wght;
+  line-height: 1.2;
+}
+.besley-15 {
+  font-weight: 300;
+  font-size: 20px;
+  font-family: Besley-VariableFont_wght;
+  line-height: 1.2;
+}
+.latin-20 {
+  font-weight: 300;
+  font-size: 40px;
+  font-family: GreatVibes-Regular;
+  line-height: 1.2;
+}
+.latin-25 {
+  font-weight: 300;
+  font-size: 45px;
+  font-family: GreatVibes-Regular;
+  line-height: 1.2;
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.breakWord {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.steps {
+  animation: typing 3.5s steps(40, end) infinite;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.font-preload {
+  display: none !important;
+}
+/* Optimasi Performa untuk Scroll dan Animasi */
+
+/* Gunakan GPU acceleration untuk elemen yang beranimasi */
+.uji-animate,
+.dan-animate,
+.hikmah-animate {
+  opacity: 0;
+  will-change: opacity, transform;
+  transform: translate3d(0, 0, 0); /* Force GPU layer */
+}
+
+.uji-animate {
+  animation: fadeInUp 1.2s ease-out 0.5s forwards;
+}
+
+.dan-animate {
+  animation: fadeInScale 0.8s ease-out 1.8s forwards;
+}
+
+.hikmah-animate {
+  animation: fadeInUp 1.2s ease-out 2.5s forwards;
+}
+
+/* Smooth scrolling untuk seluruh halaman */
+html {
+  scroll-behavior: auto; /* Matikan default smooth scroll */
+}
+
+/* Optimasi untuk elemen yang sering berubah */
+[class*="motion-"] {
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Optimasi untuk gambar */
+img {
+  image-rendering: optimizeSpeed;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+}
+
+/* Reduce motion untuk user yang prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .uji-animate,
+  .dan-animate,
+  .hikmah-animate {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimasi countdown yang update setiap detik */
+[class*="countdown"] {
+  contain: layout style paint;
+}
+
+/* Sembunyikan div dengan class font-preload yang berisi "Hikmah & Uji" */
+.font-preload {
+  display: none !important;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light only !important; -webkit-color-scheme: light only !important">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PRELOAD FONTS - TAMBAHAN PENTING -->
+    <link rel="preload" href="/fonts/GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="/fonts/Besley-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+
+    <!-- Meta tags untuk mencegah dark mode -->
+    <meta name="color-scheme" content="light only" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="msapplication-navbutton-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="light-content" />
+
+    <!-- FAVICON MENGGUNAKAN GAMBAR YANG SUDAH ADA -->
+    <link rel="icon" type="image/jpeg" href="/images/welcome.jpg" />
+    <link rel="shortcut icon" href="/images/welcome.jpg" />
+    <link rel="apple-touch-icon" href="/images/welcome.jpg" />
+
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/audio/Beautiful In White Compress.mp3" as="audio" />
+
+    <!-- IMPORT FONTS FIRST -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+      /* INLINE FONT DEFINITIONS YANG BENAR */
+      @font-face {
+        font-family: "Great Vibes";
+        src: url("/fonts/GreatVibes-Regular.ttf") format("truetype");
+        font-display: swap;
+        font-weight: normal;
+      }
+
+      @font-face {
+        font-family: "Besley";
+        src: url("/fonts/Besley-VariableFont_wght.ttf") format("truetype");
+        font-display: swap;
+        font-weight: 100 900;
+      }
+
+      html {
+        color-scheme: light only !important;
+        -webkit-color-scheme: light only !important;
+        background-color: #ffffff !important;
+      }
+
+      body {
+        color-scheme: light only !important;
+        -webkit-color-scheme: light only !important;
+        background-color: #ffffff !important;
+      }
+
+      /* Override untuk dark mode system preference */
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          color-scheme: light only !important;
+          -webkit-color-scheme: light only !important;
+          background-color: #ffffff !important;
+        }
+      }
+    </style>
+
+    <!-- Meta tags OG -->
+    <meta property="og:title" content="Undangan Pernikahan Hikmah & Uji" />
+    <meta property="og:description" content="Maha Suci Allah yang telah menciptakan makhluk-Nya berpasang-pasangan. Ya Allah semoga ridho-Mu tercurah mengiringi pernikahan kami. Sabtu, 06 September 2025" />
+    <meta property="og:image" content="/images/welcome.jpg" />
+    <meta property="og:image:alt" content="Undangan Pernikahan Hikmah & Uji" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1080" />
+    <meta property="og:image:height" content="1080" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hikmah & Uji" />
+    <meta property="og:url" content="https://undangan-pernikahan-hikmah-dan-uji.vercel.app/" />
+
+    <title>Hikmah & Uji</title>
+  </head>
+
+  <body style="color-scheme: light only !important; -webkit-color-scheme: light only !important; background-color: #ffffff !important">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

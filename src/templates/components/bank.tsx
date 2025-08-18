@@ -1,0 +1,20 @@
+"use client";
+
+import toast from "react-hot-toast";
+import Button from "../ui/button";
+
+export default function Bank({ rek, name }: { rek: string; name: string }) {
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(rek);
+    toast.success("Berhasil Di Copy");
+  };
+  return (
+    <div className="flex flex-col items-center justify-center">
+      <p className="font-medium">{rek}</p>
+      <p className="font-medium mb-2">{name}</p>
+      <Button onClick={copyToClipboard} image="/icons/copy.png">
+        Salin No Rekening
+      </Button>
+    </div>
+  );
+}
