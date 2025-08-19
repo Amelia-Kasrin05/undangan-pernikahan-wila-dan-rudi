@@ -30,7 +30,7 @@ export default function RsvpAdmin() {
     return typeof obj === "object" && "id" in obj && "name" in obj && "presence" in obj;
   }
   const getRsvpData = async () => {
-    if (name !== "@wilahnrudi_admin") {
+    if (name !== "@wilanrudi_admin") {
       return <Navigate to="/" />;
     }
 
