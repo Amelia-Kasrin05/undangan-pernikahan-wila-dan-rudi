@@ -85,7 +85,7 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
         <p className="text-gray-600 mb-6">Kami yang berbahagia,</p>
 
         {/* Simplified Profile Cards - No complex refs */}
-        <ProfileCard name="wila novita sari,AM.d" desc="Anak ke 1 putri tunggal dari Bapak Jusrul(alm) dan Ibu Desmaini" />
+        <ProfileCard name="Wila Novita Sari,AM.d" desc="Anak ke 1 putri tunggal dari Bapak Jusrul(alm) dan Ibu Desmaini" />
 
         <ProfileCard name="Rudi Mardiansah" desc="Anak ke 2 putra dari Bapak Hamdaniwal dan Ibu Lina fitri yeni" />
 
@@ -104,10 +104,7 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
             windowWidth={windowWidth}
             img="/calendar.png"
             onClick={() => {
-              window.open(
-                "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MGc5OGIyb2tjMmY0NGtlMWg4bzI2aDY0dnUgMWJiNTJjNGUyOTMyNWY3MDRmNDJjMjM5NjIyM2I2NTFhOTZiMTg3ZGUyYzYzMzk1NTI2MGQ1ZjQxNjE5ZThiMEBn&tmsrc=1bb52c4e29325f704f42c2396223b651a96b187de2c633955260d5f41619e8b0%40group.calendar.google.com",
-                "_blank"
-              );
+              window.open("https://calendar.app.google/6JdZsh2FY2SMricr7", "_blank");
             }}
           >
             Ingatkan Via Google Kalender

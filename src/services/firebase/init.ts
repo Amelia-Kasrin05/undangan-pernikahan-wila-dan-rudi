@@ -5,13 +5,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAyM6bzzAfnC9Ifr-KGF0Gg4RDXN1OLscg",
-  authDomain: "undangan-pernikahan-hikmahuji.firebaseapp.com",
-  projectId: "undangan-pernikahan-hikmahuji",
-  storageBucket: "undangan-pernikahan-hikmahuji.firebasestorage.app",
-  messagingSenderId: "307280697062",
-  appId: "1:307280697062:web:2ce16b756d869f9e9d8d27",
-  measurementId: "G-Y5TN7T7J6V",
+  apiKey: "AIzaSyBcq5nvfa3hJLL2NndYEEM9hLm9o0OjIYo",
+  authDomain: "undangan-pernikahan-wilarudi.firebaseapp.com",
+  projectId: "undangan-pernikahan-wilarudi",
+  storageBucket: "undangan-pernikahan-wilarudi.firebasestorage.app",
+  messagingSenderId: "990038503848",
+  appId: "1:990038503848:web:7131b5426b8ab62f86ad9d",
+  measurementId: "G-N7L3T5V2VS",
 };
 
 // Initialize Firebase
