@@ -14,6 +14,43 @@ body {
   color-scheme: light only !important;
   -webkit-color-scheme: light only !important;
   background-color: #ffffff !important;
+  color: #d97706 !important; /* Default gold color untuk semua text */
+}
+
+/* Gold color variables */
+:root {
+  --gold-50: #fffbeb;
+  --gold-100: #fef3c7;
+  --gold-200: #fde68a;
+  --gold-300: #fcd34d;
+  --gold-400: #fbbf24;
+  --gold-500: #f59e0b;
+  --gold-600: #d97706;
+  --gold-700: #b45309;
+  --gold-800: #92400e;
+  --gold-900: #78350f;
+}
+
+/* Override semua text color menjadi gold */
+* {
+  color: var(--gold-600) !important;
+}
+
+/* Specific gold color overrides */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--gold-700) !important;
+}
+
+p {
+  color: var(--gold-600) !important;
+}
+
+span {
+  color: var(--gold-600) !important;
+}
+
+div {
+  color: var(--gold-600) !important;
 }
 
 /* Override khusus untuk dark mode */
@@ -28,35 +65,36 @@ body {
     color-scheme: light only !important;
     -webkit-color-scheme: light only !important;
     background-color: #ffffff !important;
+    color: var(--gold-600) !important;
   }
 
-  /* Pastikan warna Tailwind tetap konsisten */
+  /* Pastikan warna Tailwind tetap konsisten dengan gold */
   .bg-white {
     background-color: #ffffff !important;
   }
 
   .text-black {
-    color: #000000 !important;
+    color: var(--gold-700) !important;
   }
 
   .text-gray-700 {
-    color: #374151 !important;
+    color: var(--gold-600) !important;
   }
 
   .text-gray-600 {
-    color: #4b5563 !important;
+    color: var(--gold-500) !important;
   }
 
   .text-gray-500 {
-    color: #6b7280 !important;
+    color: var(--gold-400) !important;
   }
 
   .text-gray-400 {
-    color: #9ca3af !important;
+    color: var(--gold-300) !important;
   }
 
   .text-blue-400 {
-    color: #60a5fa !important;
+    color: var(--gold-400) !important;
   }
 }
 
@@ -67,31 +105,40 @@ select,
 button {
   color-scheme: light only !important;
   -webkit-color-scheme: light only !important;
+  color: var(--gold-600) !important;
 }
 
-/* Override untuk scrollbar */
+input::placeholder,
+textarea::placeholder {
+  color: var(--gold-400) !important;
+}
+
+/* Override untuk scrollbar dengan gold accent */
 ::-webkit-scrollbar {
   background-color: #ffffff !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #cccccc !important;
+  background-color: var(--gold-300) !important;
 }
 
 /* Animasi sederhana tanpa particle effects */
 .Rudi-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
+  color: var(--gold-700) !important;
 }
 
 .dan-animate {
   opacity: 0;
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
+  color: var(--gold-600) !important;
 }
 
 .Wila-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
+  color: var(--gold-700) !important;
 }
 
 @keyframes fadeInUp {
@@ -137,10 +184,11 @@ button {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  @apply bg-blue-300;
+  @apply bg-yellow-100;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-white rounded-full;
+  background-color: var(--gold-400) !important;
+  border-radius: 9999px;
 }
 
 .comment-scrollbar::-webkit-scrollbar {
@@ -151,7 +199,7 @@ button {
   @apply bg-white;
 }
 .comment-scrollbar::-webkit-scrollbar-thumb {
-  @apply bg-blue-300;
+  background-color: var(--gold-300) !important;
 }
 
 .hidden-scrollbar {
@@ -176,24 +224,28 @@ button {
   font-size: 15px;
   font-family: Besley-VariableFont_wght;
   line-height: 1.2;
+  color: var(--gold-600) !important;
 }
 .besley-15 {
   font-weight: 300;
   font-size: 20px;
   font-family: Besley-VariableFont_wght;
   line-height: 1.2;
+  color: var(--gold-600) !important;
 }
 .latin-20 {
   font-weight: 300;
   font-size: 40px;
   font-family: GreatVibes-Regular;
   line-height: 1.2;
+  color: var(--gold-700) !important;
 }
 .latin-25 {
   font-weight: 300;
   font-size: 45px;
   font-family: GreatVibes-Regular;
   line-height: 1.2;
+  color: var(--gold-700) !important;
 }
 
 /* For Chrome, Safari, Edge, and Opera */
@@ -212,6 +264,7 @@ input[type="number"] {
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
+  color: var(--gold-600) !important;
 }
 
 .steps {
@@ -219,6 +272,7 @@ input[type="number"] {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
+  color: var(--gold-600) !important;
 }
 
 @keyframes typing {
@@ -233,38 +287,41 @@ input[type="number"] {
 .font-preload {
   display: none !important;
 }
-/* Optimasi Performa untuk Scroll dan Animasi */
 
-/* Gunakan GPU acceleration untuk elemen yang beranimasi */
+/* Optimasi Performa untuk Scroll dan Animasi */
 .rudi-animate,
 .dan-animate,
 .wila-animate {
   opacity: 0;
   will-change: opacity, transform;
-  transform: translate3d(0, 0, 0); /* Force GPU layer */
+  transform: translate3d(0, 0, 0);
 }
 
 .rudi-animate {
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
+  color: var(--gold-700) !important;
 }
 
 .dan-animate {
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
+  color: var(--gold-600) !important;
 }
 
 .wila-animate {
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
+  color: var(--gold-700) !important;
 }
 
 /* Smooth scrolling untuk seluruh halaman */
 html {
-  scroll-behavior: auto; /* Matikan default smooth scroll */
+  scroll-behavior: auto;
 }
 
 /* Optimasi untuk elemen yang sering berubah */
 [class*="motion-"] {
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
+  color: var(--gold-600) !important;
 }
 
 /* Optimasi untuk gambar */
@@ -294,7 +351,59 @@ img {
 /* Optimasi countdown yang update setiap detik */
 [class*="countdown"] {
   contain: layout style paint;
+  color: var(--gold-600) !important;
 }
+
+/* Gold text utilities */
+.text-gold-50 { color: var(--gold-50) !important; }
+.text-gold-100 { color: var(--gold-100) !important; }
+.text-gold-200 { color: var(--gold-200) !important; }
+.text-gold-300 { color: var(--gold-300) !important; }
+.text-gold-400 { color: var(--gold-400) !important; }
+.text-gold-500 { color: var(--gold-500) !important; }
+.text-gold-600 { color: var(--gold-600) !important; }
+.text-gold-700 { color: var(--gold-700) !important; }
+.text-gold-800 { color: var(--gold-800) !important; }
+.text-gold-900 { color: var(--gold-900) !important; }
+
+/* Override untuk link dan button text */
+a {
+  color: var(--gold-600) !important;
+}
+
+a:hover {
+  color: var(--gold-700) !important;
+}
+
+button {
+  color: var(--gold-600) !important;
+}
+
+/* Override untuk semua Tailwind text utilities menjadi gold */
+.text-white { color: var(--gold-50) !important; }
+.text-black { color: var(--gold-900) !important; }
+.text-gray-50 { color: var(--gold-100) !important; }
+.text-gray-100 { color: var(--gold-200) !important; }
+.text-gray-200 { color: var(--gold-300) !important; }
+.text-gray-300 { color: var(--gold-400) !important; }
+.text-gray-400 { color: var(--gold-500) !important; }
+.text-gray-500 { color: var(--gold-600) !important; }
+.text-gray-600 { color: var(--gold-700) !important; }
+.text-gray-700 { color: var(--gold-800) !important; }
+.text-gray-800 { color: var(--gold-900) !important; }
+.text-gray-900 { color: var(--gold-900) !important; }
+
+/* Override untuk blue colors menjadi gold */
+.text-blue-50 { color: var(--gold-100) !important; }
+.text-blue-100 { color: var(--gold-200) !important; }
+.text-blue-200 { color: var(--gold-300) !important; }
+.text-blue-300 { color: var(--gold-400) !important; }
+.text-blue-400 { color: var(--gold-500) !important; }
+.text-blue-500 { color: var(--gold-600) !important; }
+.text-blue-600 { color: var(--gold-700) !important; }
+.text-blue-700 { color: var(--gold-800) !important; }
+.text-blue-800 { color: var(--gold-900) !important; }
+.text-blue-900 { color: var(--gold-900) !important; }
 
 /* Sembunyikan div dengan class font-preload yang berisi "Wila & Rudi" */
 .font-preload {
