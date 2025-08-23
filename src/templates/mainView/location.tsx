@@ -95,7 +95,7 @@ export default function Location({ refLocation }: { refLocation: any }) {
         ref={iframe.ref}
         animate={iframe.isVisible ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 0.7 }}
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3447002506614!2d100.39702341283876!3d-0.8828367951675894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd4c7de9c7c92e1%3A0xaeeafa48813f50ee!2skos%20dadakan!5e0!3m2!1sid!2sid!4v1754643881757!5m2!1sid!2sid"
+        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.4182023005537!2d100.32013889999999!3d-0.8114444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwNDgnNDEuMiJTIDEwMMKwMTknMTIuNSJF!5e0!3m2!1sid!2sid!4v1755932011910!5m2!1sid!2sid"
         width="100%"
         height="400"
         className="max-h-[400px] z-10 -mt-5 border-2 border-blue-400 rounded-xl outline-none"
@@ -109,7 +109,7 @@ export default function Location({ refLocation }: { refLocation: any }) {
         windowWidth={windowWidth}
         img="/icons/send.png"
         onClick={() => {
-          window.open("https://maps.app.goo.gl/HUTgimfDZarwWwPz7");
+          window.open("https://maps.app.goo.gl/w1PtSEG1qE5XuywcA");
         }}
       >
         Lihat Lokasi Acara
