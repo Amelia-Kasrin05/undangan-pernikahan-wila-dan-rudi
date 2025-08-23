@@ -7,6 +7,7 @@ import ProfileCard from "../components/profileCard";
 import useVisibility from "../../services/hooks/useVisibility";
 import CountdownCard from "../components/countdownCard";
 import ButtonAnimate from "../ui/buttonAnimate";
+import { motion } from "framer-motion";
 
 export default function Introduction({ refBride, windowWidth }: { refBride: any; windowWidth: number }) {
   const bismillah = useVisibility();
@@ -72,10 +73,18 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
 
   return (
     <MainLayout>
-      <div ref={mergedRef} className="relative flex justify-center items-center w-full max-w-[350px] -my-10">
-        <div className={`bismillah-overlay absolute w-full h-20 bg-white origin-right transition-transform duration-700 delay-200 ${bismillah.isVisible ? "scale-x-0" : "scale-x-100"}`} />
-        <img src="/bismillah.png" alt="bismillah" loading="lazy" />
-      </div>
+<motion.div
+        ref={mergedRef}
+        className="relative flex justify-center items-center w-full mb-6 text-center px-4"
+        animate={
+          bismillah.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
+        }
+        transition={{ duration: 0.7 }}
+      >
+        <h1 className="font-bold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl z-10 relative leading-relaxed whitespace-nowrap">
+          بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+        </h1>
+      </motion.div>
 
       <div className="text-center flex flex-col items-center px-4">
         <p className="font-medium mb-4">Assalamu'alaikum Warahmatullaahi Wabarakaatuh</p>
@@ -85,9 +94,9 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
         <p className="text-gray-600 mb-6">Kami yang berbahagia,</p>
 
         {/* Simplified Profile Cards - No complex refs */}
-        <ProfileCard name="Wila Novita Sari,AM.d" desc="Anak ke 1 putri tunggal dari Bapak Jusrul(alm) dan Ibu Desmaini" />
+        <ProfileCard name="Wila Novita Sari, AM.d" desc="Anak ke-1 putri tunggal dari Bapak Jusrul (Alm.) dan Ibu Desmaini" />
 
-        <ProfileCard name="Rudi Mardiansah" desc="Anak ke 2 putra dari Bapak Hamdaniwal dan Ibu Lina fitri yeni" />
+        <ProfileCard name="Rudi Mardiansah" desc="Anak ke-2 putra dari Bapak Hamdaniwal dan Ibu Lina Fitri Yeni" />
 
         <footer className="mx-5 mt-10 flex flex-col gap-10">
           <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-medium">Minggu, 21 September 2025</p>
@@ -107,7 +116,7 @@ export default function Introduction({ refBride, windowWidth }: { refBride: any;
               window.open("https://calendar.app.google/6JdZsh2FY2SMricr7", "_blank");
             }}
           >
-            Ingatkan Via Google Kalender
+            Ingatkan via Google Kalender
           </ButtonAnimate>
         </footer>
       </div>

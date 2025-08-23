@@ -21,8 +21,20 @@ export default function Location({ refLocation }: { refLocation: any }) {
   return (
     <MainLayout className="gap-10">
       <div ref={refLocation} className="flex flex-col gap-5 z-10">
-        <LocationCard title="Akad Nikah" date="Minggu, 21 September 2025" time="08.00 WIB - Selesai" home="Kediaman mempelai wanita" location=" jalan perwira 1 no 41 rt 02 rw 09 katanahan, kayu kalek,SMA N 8 Padang" />
-        <LocationCard title="Resepsi" date="Minggu, 21 September 2025" time="10.00 WIB - Selesai" home="Kediaman mempelai wanita" location=" jalan perwira 1 no 41 rt 02 rw 09 katanahan, kayu kalek,SMA N 8 Padang" />
+        <LocationCard 
+          title="Akad Nikah" 
+          date="Minggu, 21 September 2025" 
+          time="08.00 WIB - Selesai" 
+          home="Kediaman Mempelai Wanita" 
+          location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" 
+        />
+        <LocationCard 
+          title="Resepsi" 
+          date="Minggu, 21 September 2025" 
+          time="10.00 WIB - Selesai" 
+          home="Kediaman Mempelai Wanita" 
+          location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" 
+        />
       </div>
 
       <motion.p ref={text1.ref} animate={text1.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }} transition={{ duration: 0.7 }} className="text-center text-gray-600">
@@ -30,7 +42,7 @@ export default function Location({ refLocation }: { refLocation: any }) {
       </motion.p>
 
       <motion.p ref={text2.ref} animate={text2.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }} transition={{ duration: 0.7 }} className="text-center font-medium -mt-5">
-        Jazakumullah Khairan Katsiran Wassalamuallaikum Warrahmatullahi Wabarakatuh
+        Jazakumullahu Khairan Katsiran Wassalaamu'alaikum Warrahmatullahi Wabarakatuh
       </motion.p>
 
       <motion.p ref={text3.ref} animate={text3.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }} transition={{ duration: 0.7 }} className="text-center font-medium -mt-5">

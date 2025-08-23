@@ -16,7 +16,7 @@ export default function Gift() {
       </motion.h1>
 
       <motion.p ref={text2.ref} animate={text2.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -30 }} transition={{ duration: 0.7 }} className="px-4">
-        Doa Restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.
+        Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Dan jika memberi adalah ungkapan tanda kasih Anda, Anda dapat memberi kado secara cashless.
       </motion.p>
 
       {/* Content - Always Visible */}
@@ -24,7 +24,7 @@ export default function Gift() {
         <div className="flex flex-col gap-8 pt-4">
           {/* Bank Options */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-start w-full px-4">
-            {/* Babk Nagari - WILA NOVITA SARI */}
+            {/* Bank Nagari - WILA NOVITA SARI */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -35,7 +35,7 @@ export default function Gift() {
               <Bank rek="10130210151316" name="A.n Wila Novita Sari" />
             </motion.div>
 
-            {/* BCA - Rudi mardiansah */}
+            {/* BCA - Rudi Mardiansah */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -43,7 +43,7 @@ export default function Gift() {
               className="flex flex-col items-center w-full md:w-1/2 max-w-[280px] mx-auto bg-white rounded-2xl p-6 shadow-lg border border-gray-100"
             >
               <motion.img src="/images/bca-logo.jpeg" alt="Logo BCA" className="max-w-[120px] w-full mb-4 rounded-lg" whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }} />
-              <Bank rek="2200711770" name="A.n Rudi mardiansah" />
+              <Bank rek="2200711770" name="A.n Rudi Mardiansah" />
             </motion.div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Gift() {
               </svg>
               <p className="text-amber-700 font-semibold">Alamat Pengiriman Kado</p>
             </div>
-            <p className="text-gray-700 leading-relaxed">Wila, jalan perwira 1 no 41 rt 02 rw 09 katanahan, kayu kalek,SMA N 8 Padang.</p>
+            <p className="text-gray-700 leading-relaxed">Wila, Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang.</p>
           </motion.div>
         </div>
       </motion.div>

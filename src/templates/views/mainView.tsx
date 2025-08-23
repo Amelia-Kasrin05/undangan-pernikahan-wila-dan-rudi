@@ -15,7 +15,7 @@ import Gift from "../mainView/gift";
 import Schedule from "../mainView/schedule";
 import Comment from "../mainView/comment";
 import Rsvp from "../mainView/rsvp";
-import LoveStory from "../mainView/loveStory";
+
 
 export default function MainView({ isOpen, audio }: { isOpen: boolean; audio: any }) {
   const windowWidth = useWindowWidth();
@@ -25,7 +25,7 @@ export default function MainView({ isOpen, audio }: { isOpen: boolean; audio: an
   const refLocation = useRef(null);
   const refSchedule = useRef(null);
   const refComment = useRef(null);
-  const refLoveStory = useRef(null);
+ 
 
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollAnimationRef = useRef<number | null>(null);
@@ -191,7 +191,7 @@ const handleScrollDown = () => {
             <Schedule refSchedule={refSchedule} />
             <Doa />
             <Gift />
-            <LoveStory refLoveStory={refLoveStory} />
+           
             <Rsvp name={name} />
             <Comment refComment={refComment} name={name} />
             <EndFooter />
