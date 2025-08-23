@@ -127,7 +127,13 @@ const handleScrollDown = () => {
         }
         className="max-w-xl w-full h-full opacity-0"
       >
-        <div className="absolute w-full h-full left-0 top-0 bg-blue-300 -z-10" />
+        {/* Background hitam dengan gradien coklat keemasan */}
+        <div 
+          className="absolute w-full h-full left-0 top-0 -z-10"
+          style={{
+            background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 25%, #1a1a1a 50%, #2a2a2a 75%, #1a1a1a 100%)"
+          }}
+        />
         <div className="absolute w-full h-full left-0 top-0 flex justify-center">
           <div
             className="w-full max-w-xl h-[112vh] -z-10"
@@ -137,7 +143,7 @@ const handleScrollDown = () => {
               backgroundPosition: "center",
               backgroundPositionX: "46%",
               backgroundSize: "cover",
-              filter: "brightness(0.3)",
+              filter: "brightness(0.2) sepia(1) hue-rotate(25deg) saturate(1.2)",
             }}
           />
         </div>
@@ -148,10 +154,14 @@ const handleScrollDown = () => {
                 onClick={handleAudio}
                 className={`w-12 h-12 rounded-full shadow-lg outline-none flex items-center justify-center transition-all duration-300 transform hover:scale-105 ${
                   isPlaying
-                    ? "bg-gradient-to-r from-green-400 to-emerald-500 text-white shadow-green-200 hover:from-green-500 hover:to-emerald-600"
-                    : "bg-gradient-to-r from-gray-400 to-slate-500 text-white shadow-gray-200 hover:from-gray-500 hover:to-slate-600"
+                    ? "bg-gradient-to-r from-amber-600 to-yellow-700 text-white shadow-amber-300 hover:from-amber-700 hover:to-yellow-800"
+                    : "bg-gradient-to-r from-gray-700 to-slate-800 text-amber-200 shadow-gray-600 hover:from-gray-800 hover:to-slate-900"
                 }`}
                 title={isPlaying ? "Pause audio" : "Play audio"}
+                style={{
+                  backgroundColor: isPlaying ? "#cd853f" : "#434343",
+                  color: isPlaying ? "#1a1a1a" : "#deb04e"
+                }}
               >
                 {isPlaying ? (
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
@@ -167,9 +177,12 @@ const handleScrollDown = () => {
 
               <button
                 onClick={handleScrollDown}
-                className={`w-12 h-12 rounded-full shadow-lg outline-none flex items-center justify-center transition-all duration-300 transform hover:scale-105 ${
-                  isScrolling ? "bg-gradient-to-r from-orange-400 to-red-500 text-white shadow-orange-200 animate-pulse" : "bg-gradient-to-r from-blue-400 to-blue-600 text-white shadow-blue-200 hover:from-blue-500 hover:to-blue-700"
-                }`}
+                className={`w-12 h-12 rounded-full shadow-lg outline-none flex items-center justify-center transition-all duration-300 transform hover:scale-105`}
+                style={{
+                  backgroundColor: isScrolling ? "#b8762d" : "#cd853f",
+                  color: "#1a1a1a",
+                  boxShadow: "0 4px 12px rgba(205, 133, 63, 0.3)"
+                }}
                 title={isScrolling ? "Stop scroll" : "Scroll ke bawah"}
               >
                 {isScrolling ? (

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: light only !important; -webkit-color-scheme: light only !important">
+<html lang="en" style="color-scheme: dark !important; -webkit-color-scheme: dark !important; background-color: #1a1a1a !important;">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,11 +8,11 @@
     <link rel="preload" href="/fonts/GreatVibes-Regular.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/fonts/Besley-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
 
-    <!-- Meta tags untuk mencegah dark mode -->
-    <meta name="color-scheme" content="light only" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="msapplication-navbutton-color" content="#ffffff" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="light-content" />
+    <!-- Meta tags untuk dark mode dengan tema Minang -->
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="msapplication-navbutton-color" content="#1a1a1a" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="dark-content" />
 
     <!-- FAVICON MENGGUNAKAN GAMBAR YANG SUDAH ADA -->
     <link rel="icon" type="image/jpeg" href="/images/welcome.jpg" />
@@ -42,24 +42,54 @@
       }
 
       html {
-        color-scheme: light only !important;
-        -webkit-color-scheme: light only !important;
-        background-color: #ffffff !important;
+        color-scheme: dark !important;
+        -webkit-color-scheme: dark !important;
+        background-color: #1a1a1a !important;
       }
 
       body {
-        color-scheme: light only !important;
-        -webkit-color-scheme: light only !important;
-        background-color: #ffffff !important;
+        color-scheme: dark !important;
+        -webkit-color-scheme: dark !important;
+        background-color: #1a1a1a !important;
+        color: #cd853f !important;
       }
 
-      /* Override untuk dark mode system preference */
+      /* Minang color variables */
+      :root {
+        --minang-50: #fdf6e3;
+        --minang-100: #f7e6c4;
+        --minang-200: #f0d49c;
+        --minang-300: #e8c275;
+        --minang-400: #deb04e;
+        --minang-500: #cd853f;
+        --minang-600: #b8762d;
+        --minang-700: #9d5f1b;
+        --minang-800: #7d4a14;
+        --minang-900: #5d3510;
+        
+        --black-900: #1a1a1a;
+        --black-800: #2a2a2a;
+        --black-700: #434343;
+      }
+
+      /* Override untuk semua user preference dark mode */
       @media (prefers-color-scheme: dark) {
         html,
         body {
-          color-scheme: light only !important;
-          -webkit-color-scheme: light only !important;
-          background-color: #ffffff !important;
+          color-scheme: dark !important;
+          -webkit-color-scheme: dark !important;
+          background-color: #1a1a1a !important;
+          color: #cd853f !important;
+        }
+      }
+
+      @media (prefers-color-scheme: light) {
+        html,
+        body {
+          color-scheme: dark !important;
+          -webkit-color-scheme: dark !important;
+          background-color: #1a1a1a !important;
+          color: #cd853f !important;
         }
       }
     </style>
@@ -79,7 +109,7 @@
     <title>Wila & Rudi</title>
   </head>
 
-  <body style="color-scheme: light only !important; -webkit-color-scheme: light only !important; background-color: #ffffff !important">
+  <body style="color-scheme: dark !important; -webkit-color-scheme: dark !important; background-color: #1a1a1a !important; color: #cd853f !important;">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
