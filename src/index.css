@@ -14,7 +14,7 @@ body {
   color-scheme: dark !important;
   -webkit-color-scheme: dark !important;
   background-color: #1a1a1a !important; /* Hitam */
-  color: #cd853f !important; /* Default coklat keemasan untuk semua text */
+  color: #deb04e !important; /* Default gold seperti "Minggu" untuk semua text */
 }
 
 /* Minang color variables - Coklat Keemasan */
@@ -43,9 +43,9 @@ body {
   --black-900: #1a1a1a;
 }
 
-/* Override semua text color menjadi coklat keemasan */
+/* Override semua text color menjadi gold seperti teks "Minggu" */
 * {
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold color seperti "Minggu" */
 }
 
 /* Background hitam untuk semua elemen */
@@ -53,21 +53,61 @@ body, html {
   background-color: var(--black-900) !important;
 }
 
-/* Specific coklat keemasan color overrides */
+/* Specific gold color overrides - Lebih cerah seperti "Minggu" */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--minang-400) !important; /* Lebih terang untuk heading */
+  color: #e8c275 !important; /* Gold lebih terang untuk heading */
 }
 
 p {
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold standar seperti "Minggu" */
 }
 
 span {
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold standar seperti "Minggu" */
 }
 
 div {
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold standar seperti "Minggu" */
+}
+
+/* TEXT OUTSIDE BUTTONS AND BOXES - GOLD LIKE "MINGGU" */
+.text-center p,
+.text-center h1,
+.text-center h2,
+.text-center h3,
+.text-center span,
+.text-center div:not(.card):not(.modal):not(.popup):not(button) {
+  color: #e8c275 !important; /* Bright gold seperti "Minggu" */
+}
+
+/* MAIN TEXT CONTENT */
+main p,
+main h1,
+main h2,
+main h3,
+main span:not(button span),
+section p,
+section h1,
+section h2,
+section h3,
+section span:not(button span) {
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+
+/* NAVIGATION AND GENERAL TEXT */
+.latin-20,
+.latin-25,
+.besley-10,
+.besley-15 {
+  color: #e8c275 !important; /* Bright gold */
+}
+
+/* DATE AND TIME TEXT */
+#day,
+#month,
+#year,
+#date {
+  color: #f0d49c !important; /* Very bright gold seperti highlight */
 }
 
 /* Override untuk elemen dengan background putih menjadi hitam */
@@ -83,16 +123,125 @@ div {
   background-color: var(--black-700) !important;
 }
 
-/* Override untuk input dan form elements */
+/* BUTTON STYLING - GOLD BACKGROUND WITH BLACK TEXT */
+button {
+  background: linear-gradient(135deg, var(--minang-400) 0%, var(--minang-500) 50%, var(--minang-400) 100%) !important;
+  color: var(--black-900) !important; /* Teks hitam */
+  border: 2px solid var(--minang-600) !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(205, 133, 63, 0.3) !important;
+  transition: all 0.3s ease !important;
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--minang-300) 0%, var(--minang-400) 50%, var(--minang-300) 100%) !important;
+  color: var(--black-900) !important; /* Tetap teks hitam saat hover */
+  border-color: var(--minang-500) !important;
+  box-shadow: 0 6px 16px rgba(205, 133, 63, 0.4) !important;
+  transform: translateY(-2px) !important;
+}
+
+button:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(205, 133, 63, 0.3) !important;
+}
+
+/* SPECIFIC BUTTON CLASSES */
+.bg-blue-400 {
+  background: linear-gradient(135deg, var(--minang-400) 0%, var(--minang-500) 50%, var(--minang-400) 100%) !important;
+  color: var(--black-900) !important;
+}
+
+.bg-blue-400:hover {
+  background: linear-gradient(135deg, var(--minang-300) 0%, var(--minang-400) 50%, var(--minang-300) 100%) !important;
+}
+
+/* BOX AND CARD STYLING - DARK BACKGROUND WITH GOLD ACCENTS (ORIGINAL) */
+.card, 
+.modal, 
+.popup,
+.comment-box,
+.profile-card {
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 2px solid var(--minang-600) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(205, 133, 63, 0.1),
+    inset 0 1px 0 rgba(205, 133, 63, 0.2) !important;
+  color: var(--minang-500) !important;
+}
+
+/* SPECIAL STYLING FOR LOCATION CARDS (AKAD NIKAH & RESEPSI) - GOLD BACKGROUND WITH BLACK TEXT */
+.location-card {
+  background: linear-gradient(135deg, #deb04e 0%, #cd853f 50%, #b8762d 100%) !important;
+  border: 2px solid #9d5f1b !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(222, 176, 78, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  color: #1a1a1a !important; /* Black text in location cards */
+}
+
+/* All text inside location cards should be black */
+.location-card *,
+.location-card h3,
+.location-card p,
+.location-card span,
+.location-card div {
+  color: #1a1a1a !important; /* Black text for all elements inside location cards */
+}
+
+/* ENHANCED BOX STYLES */
+.bg-white,
+.bg-white\/90 {
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 2px solid var(--minang-600) !important;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(205, 133, 63, 0.15),
+    inset 0 1px 0 rgba(205, 133, 63, 0.1) !important;
+}
+
+/* GRADIENT BOXES */
+.bg-gradient-to-r {
+  background: linear-gradient(135deg, var(--black-800) 0%, var(--black-700) 50%, var(--black-800) 100%) !important;
+  border: 2px solid var(--minang-500) !important;
+  position: relative;
+}
+
+.bg-gradient-to-r::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--minang-400), var(--minang-500), var(--minang-600), var(--minang-400));
+  border-radius: inherit;
+  z-index: -1;
+}
+
+/* INPUT STYLING - GOLD BORDER WITH DARK BACKGROUND */
 input,
 textarea,
-select,
-button {
-  color-scheme: dark !important;
-  -webkit-color-scheme: dark !important;
-  color: var(--minang-500) !important;
-  background-color: var(--black-800) !important;
-  border-color: var(--minang-600) !important;
+select {
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  color: var(--minang-400) !important;
+  border: 2px solid var(--minang-600) !important;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(205, 133, 63, 0.1) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--minang-400) !important;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 0 0 3px rgba(205, 133, 63, 0.2) !important;
+  outline: none !important;
 }
 
 input::placeholder,
@@ -100,32 +249,212 @@ textarea::placeholder {
   color: var(--minang-300) !important;
 }
 
+input:disabled,
+textarea:disabled {
+  background: linear-gradient(145deg, var(--black-700) 0%, var(--black-600) 100%) !important;
+  color: var(--minang-600) !important;
+  border-color: var(--minang-700) !important;
+}
+
+/* OVERRIDE UNTUK BG-GRAY-200 (INPUT DISABLED) */
+.bg-gray-200 {
+  background: linear-gradient(145deg, var(--black-700) 0%, var(--black-600) 100%) !important;
+  border: 2px solid var(--minang-700) !important;
+  color: var(--minang-600) !important;
+}
+
 /* Override untuk scrollbar dengan coklat keemasan accent */
 ::-webkit-scrollbar {
   background-color: var(--black-900) !important;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--minang-600) !important;
+  background: linear-gradient(180deg, var(--minang-500) 0%, var(--minang-600) 100%) !important;
+  border-radius: 9999px;
+  border: 1px solid var(--minang-700) !important;
 }
 
-/* Animasi dengan warna coklat keemasan */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--minang-400) 0%, var(--minang-500) 100%) !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--black-800) !important;
+  border-radius: 9999px;
+}
+
+.comment-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.comment-scrollbar::-webkit-scrollbar-track {
+  background-color: var(--black-900) !important;
+}
+
+.comment-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--minang-500) 0%, var(--minang-600) 100%) !important;
+  border-radius: 9999px;
+}
+
+.hidden-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* FONT FACES */
+@font-face {
+  font-family: GreatVibes-Regular;
+  src: url(/fonts/GreatVibes-Regular.ttf);
+}
+@font-face {
+  font-family: Besley-VariableFont_wght;
+  src: url(/fonts/Besley-VariableFont_wght.ttf);
+}
+
+.besley-10 {
+  font-weight: 300;
+  font-size: 15px;
+  font-family: Besley-VariableFont_wght;
+  line-height: 1.2;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+.besley-15 {
+  font-weight: 300;
+  font-size: 20px;
+  font-family: Besley-VariableFont_wght;
+  line-height: 1.2;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+.latin-20 {
+  font-weight: 300;
+  font-size: 40px;
+  font-family: GreatVibes-Regular;
+  line-height: 1.2;
+  color: #e8c275 !important; /* Bright gold */
+}
+.latin-25 {
+  font-weight: 300;
+  font-size: 45px;
+  font-family: GreatVibes-Regular;
+  line-height: 1.2;
+  color: #e8c275 !important; /* Bright gold */
+}
+
+/* For Chrome, Safari, Edge, and Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.breakWord {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+
+.steps {
+  animation: typing 3.5s steps(40, end) infinite;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.font-preload {
+  display: none !important;
+}
+
+/* SPECIAL TEXT STYLING - GOLD LIKE "MINGGU" */
+
+/* Profile names and special text */
+.wila-animate,
+.rudi-animate {
+  color: #f0d49c !important; /* Very bright gold */
+}
+
+.dan-animate {
+  color: #e8c275 !important; /* Bright gold */
+}
+
+/* Date and countdown styling */
+.countdown span,
+.countdown div,
+#theWeddingOf {
+  color: #e8c275 !important; /* Bright gold seperti "Minggu" */
+}
+
+/* Location and schedule text */
+.location-text,
+.schedule-text,
+.doa-text {
+  color: #deb04e !important; /* Standard gold seperti "Minggu" */
+}
+
+/* All text elements outside buttons and input boxes */
+p:not(button p):not(.card p):not(.modal p),
+h1:not(button h1):not(.card h1):not(.modal h1),
+h2:not(button h2):not(.card h2):not(.modal h2),
+h3:not(button h3):not(.card h3):not(.modal h3),
+span:not(button span):not(.card span):not(.modal span):not(input span),
+div:not(button):not(.card):not(.modal):not(input):not(.bg-white):not(.bg-gray-50):not(.bg-gray-100):not(.bg-yellow-50):not(.bg-yellow-100) {
+  color: #deb04e !important; /* Gold seperti "Minggu" */
+}
+
+/* Special elements that should be brighter */
+.font-bold,
+.font-semibold,
+.font-medium {
+  color: #e8c275 !important; /* Brighter gold */
+}
+
+/* Ensure white text becomes gold */
+.text-white:not(button .text-white) {
+  color: #f0d49c !important; /* Very bright gold */
+}
+
+/* Prayer text and Arabic text */
+.text-center h1,
+.text-center p {
+  color: #e8c275 !important; /* Bright gold for center text */
+}
+
+/* Animasi dengan warna gold seperti "Minggu" */
 .Rudi-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
-  color: var(--minang-400) !important;
+  color: #e8c275 !important; /* Bright gold */
 }
 
 .dan-animate {
   opacity: 0;
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
 }
 
 .Wila-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
-  color: var(--minang-400) !important;
+  color: #e8c275 !important; /* Bright gold */
 }
 
 @keyframes fadeInUp {
@@ -167,114 +496,6 @@ textarea::placeholder {
   }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--black-800) !important;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--minang-600) !important;
-  border-radius: 9999px;
-}
-
-.comment-scrollbar::-webkit-scrollbar {
-  width: 6px;
-}
-
-.comment-scrollbar::-webkit-scrollbar-track {
-  background-color: var(--black-900) !important;
-}
-.comment-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--minang-500) !important;
-}
-
-.hidden-scrollbar {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-@font-face {
-  font-family: GreatVibes-Regular;
-  src: url(/fonts/GreatVibes-Regular.ttf);
-}
-@font-face {
-  font-family: Besley-VariableFont_wght;
-  src: url(/fonts/Besley-VariableFont_wght.ttf);
-}
-
-.besley-10 {
-  font-weight: 300;
-  font-size: 15px;
-  font-family: Besley-VariableFont_wght;
-  line-height: 1.2;
-  color: var(--minang-500) !important;
-}
-.besley-15 {
-  font-weight: 300;
-  font-size: 20px;
-  font-family: Besley-VariableFont_wght;
-  line-height: 1.2;
-  color: var(--minang-500) !important;
-}
-.latin-20 {
-  font-weight: 300;
-  font-size: 40px;
-  font-family: GreatVibes-Regular;
-  line-height: 1.2;
-  color: var(--minang-400) !important;
-}
-.latin-25 {
-  font-weight: 300;
-  font-size: 45px;
-  font-family: GreatVibes-Regular;
-  line-height: 1.2;
-  color: var(--minang-400) !important;
-}
-
-/* For Chrome, Safari, Edge, and Opera */
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* For Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
-}
-
-.breakWord {
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-word;
-  color: var(--minang-500) !important;
-}
-
-.steps {
-  animation: typing 3.5s steps(40, end) infinite;
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  color: var(--minang-500) !important;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-.font-preload {
-  display: none !important;
-}
-
 /* Optimasi Performa untuk Scroll dan Animasi */
 .rudi-animate,
 .dan-animate,
@@ -286,17 +507,17 @@ input[type="number"] {
 
 .rudi-animate {
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
-  color: var(--minang-400) !important;
+  color: #e8c275 !important; /* Bright gold */
 }
 
 .dan-animate {
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
 }
 
 .wila-animate {
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
-  color: var(--minang-400) !important;
+  color: #e8c275 !important; /* Bright gold */
 }
 
 /* Smooth scrolling untuk seluruh halaman */
@@ -308,7 +529,7 @@ html {
 [class*="motion-"] {
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
-  color: var(--minang-500) !important;
+  color: #deb04e !important; /* Gold seperti "Minggu" */
 }
 
 /* Optimasi untuk gambar */
@@ -335,23 +556,17 @@ img {
   }
 }
 
-/* Optimasi countdown yang update setiap detik */
-[class*="countdown"] {
-  contain: layout style paint;
-  color: var(--minang-500) !important;
-}
-
-/* Minang coklat keemasan text utilities */
-.text-minang-50 { color: var(--minang-50) !important; }
-.text-minang-100 { color: var(--minang-100) !important; }
-.text-minang-200 { color: var(--minang-200) !important; }
-.text-minang-300 { color: var(--minang-300) !important; }
-.text-minang-400 { color: var(--minang-400) !important; }
-.text-minang-500 { color: var(--minang-500) !important; }
-.text-minang-600 { color: var(--minang-600) !important; }
-.text-minang-700 { color: var(--minang-700) !important; }
-.text-minang-800 { color: var(--minang-800) !important; }
-.text-minang-900 { color: var(--minang-900) !important; }
+/* Minang gold text utilities - Updated to match "Minggu" color */
+.text-minang-50 { color: #fdf6e3 !important; }
+.text-minang-100 { color: #f7e6c4 !important; }
+.text-minang-200 { color: #f0d49c !important; }
+.text-minang-300 { color: #e8c275 !important; }
+.text-minang-400 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-minang-500 { color: #cd853f !important; }
+.text-minang-600 { color: #b8762d !important; }
+.text-minang-700 { color: #9d5f1b !important; }
+.text-minang-800 { color: #7d4a14 !important; }
+.text-minang-900 { color: #5d3510 !important; }
 
 /* Background hitam utilities */
 .bg-black-50 { background-color: var(--black-50) !important; }
@@ -365,73 +580,72 @@ img {
 .bg-black-800 { background-color: var(--black-800) !important; }
 .bg-black-900 { background-color: var(--black-900) !important; }
 
-/* Override untuk link dan button text */
+/* Override untuk link dengan gold color */
 a {
   color: var(--minang-400) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 a:hover {
   color: var(--minang-300) !important;
+  text-shadow: 0 0 8px rgba(205, 133, 63, 0.3);
 }
 
-button {
-  color: var(--minang-500) !important;
-  background-color: var(--black-800) !important;
-  border-color: var(--minang-600) !important;
-}
+/* Override untuk semua Tailwind text utilities menjadi gold seperti "Minggu" */
+.text-white { color: #f0d49c !important; } /* Very bright gold */
+.text-black { color: #5d3510 !important; }
+.text-gray-50 { color: #f0d49c !important; }
+.text-gray-100 { color: #e8c275 !important; }
+.text-gray-200 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-gray-300 { color: #cd853f !important; }
+.text-gray-400 { color: #b8762d !important; }
+.text-gray-500 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-gray-600 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-gray-700 { color: #e8c275 !important; }
+.text-gray-800 { color: #f0d49c !important; }
+.text-gray-900 { color: #f7e6c4 !important; }
 
-button:hover {
-  background-color: var(--black-700) !important;
-  color: var(--minang-400) !important;
-}
+/* Override untuk blue colors menjadi gold seperti "Minggu" */
+.text-blue-50 { color: #f0d49c !important; }
+.text-blue-100 { color: #e8c275 !important; }
+.text-blue-200 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-blue-300 { color: #cd853f !important; }
+.text-blue-400 { color: #b8762d !important; }
+.text-blue-500 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-blue-600 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-blue-700 { color: #e8c275 !important; }
+.text-blue-800 { color: #f0d49c !important; }
+.text-blue-900 { color: #f7e6c4 !important; }
 
-/* Override untuk semua Tailwind text utilities menjadi coklat keemasan */
-.text-white { color: var(--minang-100) !important; }
-.text-black { color: var(--minang-900) !important; }
-.text-gray-50 { color: var(--minang-200) !important; }
-.text-gray-100 { color: var(--minang-300) !important; }
-.text-gray-200 { color: var(--minang-400) !important; }
-.text-gray-300 { color: var(--minang-500) !important; }
-.text-gray-400 { color: var(--minang-600) !important; }
-.text-gray-500 { color: var(--minang-500) !important; }
-.text-gray-600 { color: var(--minang-400) !important; }
-.text-gray-700 { color: var(--minang-300) !important; }
-.text-gray-800 { color: var(--minang-200) !important; }
-.text-gray-900 { color: var(--minang-100) !important; }
-
-/* Override untuk blue colors menjadi coklat keemasan */
-.text-blue-50 { color: var(--minang-200) !important; }
-.text-blue-100 { color: var(--minang-300) !important; }
-.text-blue-200 { color: var(--minang-400) !important; }
-.text-blue-300 { color: var(--minang-500) !important; }
-.text-blue-400 { color: var(--minang-600) !important; }
-.text-blue-500 { color: var(--minang-500) !important; }
-.text-blue-600 { color: var(--minang-400) !important; }
-.text-blue-700 { color: var(--minang-300) !important; }
-.text-blue-800 { color: var(--minang-200) !important; }
-.text-blue-900 { color: var(--minang-100) !important; }
-
-/* Override untuk yellow/gold colors menjadi coklat keemasan */
-.text-yellow-50 { color: var(--minang-100) !important; }
-.text-yellow-100 { color: var(--minang-200) !important; }
-.text-yellow-200 { color: var(--minang-300) !important; }
-.text-yellow-300 { color: var(--minang-400) !important; }
-.text-yellow-400 { color: var(--minang-500) !important; }
-.text-yellow-500 { color: var(--minang-600) !important; }
-.text-yellow-600 { color: var(--minang-500) !important; }
-.text-yellow-700 { color: var(--minang-400) !important; }
-.text-yellow-800 { color: var(--minang-300) !important; }
-.text-yellow-900 { color: var(--minang-200) !important; }
+/* Override untuk yellow/gold colors menjadi gold seperti "Minggu" */
+.text-yellow-50 { color: #f7e6c4 !important; }
+.text-yellow-100 { color: #f0d49c !important; }
+.text-yellow-200 { color: #e8c275 !important; }
+.text-yellow-300 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-yellow-400 { color: #cd853f !important; }
+.text-yellow-500 { color: #b8762d !important; }
+.text-yellow-600 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-yellow-700 { color: #deb04e !important; } /* Gold seperti "Minggu" */
+.text-yellow-800 { color: #e8c275 !important; }
+.text-yellow-900 { color: #f0d49c !important; }
 
 /* Background overrides */
-.bg-yellow-100 { background-color: var(--black-800) !important; }
-.bg-yellow-50 { background-color: var(--black-700) !important; }
-.bg-gray-100 { background-color: var(--black-800) !important; }
-.bg-gray-50 { background-color: var(--black-700) !important; }
-
-/* Card dan container backgrounds */
-.bg-white {
-  background-color: var(--black-900) !important;
+.bg-yellow-100 { 
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 1px solid var(--minang-600) !important;
+}
+.bg-yellow-50 { 
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 1px solid var(--minang-600) !important;
+}
+.bg-gray-100 { 
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 1px solid var(--minang-600) !important;
+}
+.bg-gray-50 { 
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
+  border: 1px solid var(--minang-600) !important;
 }
 
 /* Border colors dengan coklat keemasan */
@@ -439,14 +653,50 @@ button:hover {
 .border-gray-300 { border-color: var(--minang-600) !important; }
 .border-yellow-200 { border-color: var(--minang-600) !important; }
 .border-yellow-300 { border-color: var(--minang-500) !important; }
+.border-blue-100 { border-color: var(--minang-600) !important; }
+.border-blue-400 { border-color: var(--minang-500) !important; }
 
 /* Shadow dengan nuansa coklat keemasan */
 .shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(205, 133, 63, 0.1), 0 4px 6px -2px rgba(205, 133, 63, 0.05) !important;
+  box-shadow: 
+    0 10px 15px -3px rgba(205, 133, 63, 0.15), 
+    0 4px 6px -2px rgba(205, 133, 63, 0.1),
+    0 0 0 1px rgba(205, 133, 63, 0.05) !important;
 }
 
 .shadow-md {
-  box-shadow: 0 4px 6px -1px rgba(205, 133, 63, 0.1), 0 2px 4px -1px rgba(205, 133, 63, 0.06) !important;
+  box-shadow: 
+    0 4px 6px -1px rgba(205, 133, 63, 0.15), 
+    0 2px 4px -1px rgba(205, 133, 63, 0.1),
+    0 0 0 1px rgba(205, 133, 63, 0.05) !important;
+}
+
+/* ENHANCED GRADIENT BACKGROUNDS FOR SPECIAL SECTIONS */
+.bg-gradient-to-r.from-blue-50.to-indigo-50 {
+  background: linear-gradient(135deg, 
+    var(--black-800) 0%, 
+    var(--black-700) 25%,
+    var(--black-800) 50%,
+    var(--black-700) 75%,
+    var(--black-800) 100%) !important;
+  border: 2px solid var(--minang-500) !important;
+  position: relative;
+}
+
+.bg-gradient-to-r.from-blue-50.to-indigo-50::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    var(--minang-400), 
+    var(--minang-500), 
+    var(--minang-600), 
+    var(--minang-400));
+  border-radius: inherit;
+  z-index: -1;
 }
 
 /* Sembunyikan div dengan class font-preload yang berisi "Wila & Rudi" */
@@ -454,18 +704,42 @@ button:hover {
   display: none !important;
 }
 
-/* Override untuk elemen yang mungkin memiliki background terang */
-[class*="bg-white"],
-[class*="bg-gray-50"],
-[class*="bg-gray-100"],
-[class*="bg-yellow-50"],
-[class*="bg-yellow-100"] {
-  background-color: var(--black-900) !important;
+/* SPECIAL HOVER EFFECTS FOR INTERACTIVE ELEMENTS */
+.hover\:shadow-xl:hover {
+  box-shadow: 
+    0 20px 25px -5px rgba(205, 133, 63, 0.2),
+    0 8px 10px -6px rgba(205, 133, 63, 0.15),
+    0 0 0 1px rgba(205, 133, 63, 0.1) !important;
+}
+
+.hover\:shadow-md:hover {
+  box-shadow: 
+    0 4px 6px -1px rgba(205, 133, 63, 0.2),
+    0 2px 4px -1px rgba(205, 133, 63, 0.15),
+    0 0 0 1px rgba(205, 133, 63, 0.1) !important;
+}
+
+/* ENSURE ROUNDED ELEMENTS MAINTAIN GOLD THEME */
+.rounded-full,
+.rounded-xl,
+.rounded-2xl,
+.rounded-lg {
+  box-shadow: 0 0 0 1px rgba(205, 133, 63, 0.2) !important;
+}
+
+/* MODAL AND POPUP SPECIFIC STYLING */
+.modal, .popup {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 /* Ensure cards and modals have dark background */
 .modal, .card, .popup {
-  background-color: var(--black-800) !important;
+  background: linear-gradient(145deg, var(--black-800) 0%, var(--black-700) 100%) !important;
   color: var(--minang-500) !important;
-  border-color: var(--minang-600) !important;
+  border: 2px solid var(--minang-600) !important;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(205, 133, 63, 0.1),
+    inset 0 1px 0 rgba(205, 133, 63, 0.1) !important;
 }
