@@ -22,11 +22,12 @@ export default function LocationCard({
 
   return (
     <div 
-      className="shadow-custom p-4 flex flex-col gap-2 text-center max-w-[350px] z-10 rounded-xl"
+      className="shadow-custom p-6 flex flex-col gap-3 text-center max-w-[350px] z-10 rounded-xl location-card"
       style={{
-        background: "linear-gradient(135deg, #FFD700 0%, #DAA520 50%, #B8860B 100%)",
-        border: "2px solid #FFD700",
-        boxShadow: "0 8px 32px rgba(218, 165, 32, 0.3), 0 4px 16px rgba(255, 215, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2)"
+        // SOLUSI 1: Background gelap dengan border gold
+        background: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 50%, #2a2a2a 100%)",
+        border: "3px solid #FFD700",
+        boxShadow: "0 8px 32px rgba(255, 215, 0, 0.4), 0 4px 16px rgba(218, 165, 32, 0.3), inset 0 1px 0 rgba(255, 215, 0, 0.3)"
       }}
     >
       <motion.h1
@@ -35,8 +36,13 @@ export default function LocationCard({
           text1.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        className="latin-20"
-        style={{ color: "#000000", fontWeight: "600" }}
+        className="latin-20 location-card-text"
+        style={{ 
+          color: "#FFD700 !important", 
+          fontWeight: "700",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(255, 215, 0, 0.3)",
+          fontSize: "2.5rem"
+        }}
       >
         {title}
       </motion.h1>
@@ -47,7 +53,13 @@ export default function LocationCard({
           text1.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        style={{ color: "#000000", fontWeight: "600" }}
+        className="location-card-text"
+        style={{ 
+          color: "#FFFFFF !important", 
+          fontWeight: "600",
+          textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+          fontSize: "1.1rem"
+        }}
       >
         {date}
       </motion.p>
@@ -58,7 +70,13 @@ export default function LocationCard({
           text2.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        style={{ color: "#000000", fontWeight: "600" }}
+        className="location-card-text"
+        style={{ 
+          color: "#FFFFFF !important", 
+          fontWeight: "600",
+          textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+          fontSize: "1.1rem"
+        }}
       >
         {time}
       </motion.p>
@@ -69,8 +87,14 @@ export default function LocationCard({
           text3.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        className="font-bold"
-        style={{ color: "#000000", fontWeight: "800" }}
+        className="font-bold location-card-text"
+        style={{ 
+          color: "#FFD700 !important", 
+          fontWeight: "800",
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 8px rgba(255, 215, 0, 0.2)",
+          fontSize: "1.2rem",
+          marginTop: "0.5rem"
+        }}
       >
         Lokasi / Tempat Acara:
       </motion.h2>
@@ -81,8 +105,13 @@ export default function LocationCard({
           text4.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        className="-mb-3"
-        style={{ color: "#000000", fontWeight: "700" }}
+        className="-mb-2 location-card-text"
+        style={{ 
+          color: "#FFFFFF !important", 
+          fontWeight: "700",
+          textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+          fontSize: "1.1rem"
+        }}
       >
         {home}
       </motion.p>
@@ -93,8 +122,14 @@ export default function LocationCard({
           text5.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
         }
         transition={{ duration: 0.7 }}
-        className="leading-6"
-        style={{ color: "#000000", fontWeight: "600" }}
+        className="leading-6 location-card-text"
+        style={{ 
+          color: "#FFFFFF !important", 
+          fontWeight: "600",
+          textShadow: "1px 1px 3px rgba(0, 0, 0, 0.8)",
+          fontSize: "1rem",
+          lineHeight: "1.5"
+        }}
       >
         {location}
       </motion.p>
