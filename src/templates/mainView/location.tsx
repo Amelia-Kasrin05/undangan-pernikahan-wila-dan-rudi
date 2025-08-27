@@ -21,20 +21,8 @@ export default function Location({ refLocation }: { refLocation: any }) {
   return (
     <MainLayout className="gap-10">
       <div ref={refLocation} className="flex flex-col gap-5 z-10">
-        <LocationCard 
-          title="Akad Nikah" 
-          date="Minggu, 21 September 2025" 
-          time="08.00 WIB - Selesai" 
-          home="Kediaman Mempelai Wanita" 
-          location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" 
-        />
-        <LocationCard 
-          title="Resepsi" 
-          date="Minggu, 21 September 2025" 
-          time="10.00 WIB - Selesai" 
-          home="Kediaman Mempelai Wanita" 
-          location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" 
-        />
+        <LocationCard title="Akad Nikah" date="Minggu, 21 September 2025" time="08.00 WIB - Selesai" home="Kediaman Mempelai Wanita" location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" />
+        <LocationCard title="Resepsi" date="Minggu, 21 September 2025" time="10.00 WIB - Selesai" home="Kediaman Mempelai Wanita" location="Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang" />
       </div>
 
       <motion.p ref={text1.ref} animate={text1.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }} transition={{ duration: 0.7 }} className="text-center text-gray-600">
@@ -88,7 +76,7 @@ export default function Location({ refLocation }: { refLocation: any }) {
       </p>
 
       <motion.div ref={flower.ref} animate={flower.isVisible ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.7 }} className="relative max-w-[130px] h-7 w-full -mt-7">
-        <img src="/images/undername.png" alt="" className="max-w-[130px] w-full absolute -top-6" />
+        <img src="/images/undername.png" alt="" className="max-w-[130px] w-full absolute -top-1" />
       </motion.div>
 
       <motion.iframe
