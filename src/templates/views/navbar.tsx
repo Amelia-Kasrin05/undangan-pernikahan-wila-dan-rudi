@@ -133,9 +133,26 @@ export default function Navbar({ refHome, refBride, refLocation, refSchedule, re
   return (
     <div className="fixed bottom-3 left-1/2 -translate-x-1/2 min-w-[3rem] h-12 flex justify-center items-center z-30 px-0">
       <div id="parentRounded" className="w-full h-full absolute rounded-full">
-        <div id="rounded" className="absolute w-full h-full bg-blue-400 rounded-full overflow-hidden" style={{ clipPath: "circle(13px at 50% 50%)" }} />
+        <div
+          id="rounded"
+          className="absolute w-full h-full rounded-full overflow-hidden shadow-2xl"
+          style={{
+            clipPath: "circle(13px at 50% 50%)",
+            background: "linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%)",
+            boxShadow: "0 8px 25px rgba(0, 0, 0, 0.6), inset 0 1px 3px rgba(255, 255, 255, 0.1)",
+          }}
+        />
       </div>
-      <motion.div id="bgRounded" initial={{ clipPath: "circle(0px at 50% 50%)" }} animate={{ clipPath: `circle(22px at ${xPosition}% 50%)` }} className="w-full h-full absolute bg-blue-500 opacity-100" />
+      <motion.div
+        id="bgRounded"
+        initial={{ clipPath: "circle(0px at 50% 50%)" }}
+        animate={{ clipPath: `circle(22px at ${xPosition}% 50%)` }}
+        className="w-full h-full absolute opacity-100 shadow-lg"
+        style={{
+          background: "linear-gradient(135deg, #D4AF37 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #D4AF37 100%)",
+          boxShadow: "0 6px 20px rgba(212, 175, 55, 0.4), 0 0 15px rgba(255, 215, 0, 0.3)",
+        }}
+      />
       <Home onClick={() => handleScroll("home")} />
       <Heart onClick={() => handleScroll("bride")} />
       <Location onClick={() => handleScroll("location")} />

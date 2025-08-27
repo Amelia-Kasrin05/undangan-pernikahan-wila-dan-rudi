@@ -5,8 +5,6 @@ import MainLayout from "../components/mainLayout";
 import { motion } from "framer-motion";
 
 export default function Location({ refLocation }: { refLocation: any }) {
-  
-
   const button = useVisibility();
   const text1 = useVisibility();
   const text2 = useVisibility();
@@ -84,7 +82,11 @@ export default function Location({ refLocation }: { refLocation: any }) {
         src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3989.4182023005537!2d100.32013889999999!3d-0.8114444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMMKwNDgnNDEuMiJTIDEwMMKwMTknMTIuNSJF!5e0!3m2!1sid!2sid!4v1755932011910!5m2!1sid!2sid"
         width="100%"
         height="400"
-        className="max-h-[400px] z-10 -mt-5 border-2 border-blue-400 rounded-xl outline-none"
+        className="max-h-[400px] z-10 -mt-5 border-2 rounded-xl outline-none"
+        style={{
+          borderColor: "#D4AF37",
+          boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
+        }}
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
@@ -100,7 +102,7 @@ export default function Location({ refLocation }: { refLocation: any }) {
         className="group relative px-8 py-4 text-white font-semibold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden active:scale-95"
         style={{
           background: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 25%, #434343 50%, #1a1a1a 75%, #2a2a2a 100%)",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)"
+          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.background = "linear-gradient(135deg, #D4AF37 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #D4AF37 100%)";
@@ -115,14 +117,14 @@ export default function Location({ refLocation }: { refLocation: any }) {
       >
         {/* Shimmer effect - lebih terlihat pada background gelap */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-        
+
         <div className="relative flex items-center justify-center gap-3">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="drop-shadow-sm transition-colors duration-300">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
           </svg>
           <span className="text-lg font-bold drop-shadow-sm transition-colors duration-300">Lihat Lokasi Acara</span>
         </div>
-        
+
         {/* Glow effect yang berubah saat hover */}
         <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-600/20 to-gray-700/20 group-hover:from-yellow-400/20 group-hover:to-amber-400/20 blur-sm group-hover:blur-md transition-all duration-300" />
       </motion.button>

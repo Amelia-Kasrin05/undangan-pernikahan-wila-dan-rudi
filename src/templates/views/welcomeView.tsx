@@ -90,9 +90,31 @@ export default function WelcomeView({ setIsOpen, isOpen, audio }: { isOpen: bool
         <motion.button
           animate={isOpen && { opacity: 0, y: 30, transition: { duration: 0.5 } }}
           onClick={handleClick}
-          className={`p-[6px] px-4 bg-blue-400 text-white rounded-full mt-2 hover:bg-blue-400/80 transition-all duration-300 transform hover:scale-105 ${windowWidth < 500 && "text-xs"}`}
+          className={`group relative px-8 py-4 text-white font-semibold rounded-full shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden active:scale-95 mt-2 ${windowWidth < 500 && "text-sm px-6 py-3"}`}
+          style={{
+            background: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 25%, #434343 50%, #1a1a1a 75%, #2a2a2a 100%)",
+            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = "linear-gradient(135deg, #D4AF37 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #D4AF37 100%)";
+            e.currentTarget.style.color = "#1a1a1a";
+            e.currentTarget.style.boxShadow = "0 15px 40px rgba(212, 175, 55, 0.6), 0 0 30px rgba(255, 215, 0, 0.4)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 25%, #434343 50%, #1a1a1a 75%, #2a2a2a 100%)";
+            e.currentTarget.style.color = "#ffffff";
+            e.currentTarget.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)";
+          }}
         >
-          Buka Undangan
+          {/* Shimmer effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+
+          <div className="relative flex items-center justify-center gap-3">
+            <span className="text-lg font-bold drop-shadow-sm transition-colors duration-300">Buka Undangan</span>
+          </div>
+
+          {/* Glow effect */}
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-gray-600/20 to-gray-700/20 group-hover:from-yellow-400/20 group-hover:to-amber-400/20 blur-sm group-hover:blur-md transition-all duration-300" />
         </motion.button>
       </motion.div>
     </React.Fragment>
