@@ -8,7 +8,7 @@ import useVisibility from "../../services/hooks/useVisibility";
 import CountdownCard from "../components/countdownCard";
 import { motion } from "framer-motion";
 
-export default function Introduction({ refBride, windowWidth }: { refBride: any; windowWidth: number }) {
+export default function Introduction({ refBride,  }: { refBride: any; windowWidth: number }) {
   const bismillah = useVisibility();
   const countdown = useVisibility();
   const button = useVisibility();

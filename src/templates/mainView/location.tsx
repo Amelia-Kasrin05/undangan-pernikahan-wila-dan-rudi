@@ -1,12 +1,11 @@
 "use client";
 import useVisibility from "../../services/hooks/useVisibility";
-import useWindowWidth from "../../services/hooks/useWindowWidth";
 import LocationCard from "../components/locationCard";
 import MainLayout from "../components/mainLayout";
 import { motion } from "framer-motion";
 
 export default function Location({ refLocation }: { refLocation: any }) {
-  const windowWidth = useWindowWidth();
+  
 
   const button = useVisibility();
   const text1 = useVisibility();
