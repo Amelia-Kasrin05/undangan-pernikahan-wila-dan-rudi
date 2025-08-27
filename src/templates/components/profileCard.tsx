@@ -31,7 +31,12 @@ export default function ProfileCard({ name, desc, instagramLink }: { name: strin
   return (
     <div ref={cardRef} className={`profile-card mt-12 mb-8 flex flex-col gap-4 items-center px-2 w-full max-w-[380px] mx-auto ${isVisible ? "animate-in" : "animate-out"}`}>
       {/* Profile Image */}
-      <div className="profile-image relative p-2 w-40 h-40 bg-gradient-to-br from-blue-200 via-blue-300 to-blue-400 shadow-2xl rounded-full">
+      <div
+        className="profile-image relative p-2 w-40 h-40 shadow-2xl rounded-full"
+        style={{
+          background: "linear-gradient(135deg, #f7e6c4 0%, #deb04e 25%, #cd853f 50%, #b8762d 75%, #cd853f 100%)",
+        }}
+      >
         <div
           className="w-full h-full rounded-full bg-gray-500 overflow-hidden border-4 border-white shadow-inner"
           style={{
@@ -41,23 +46,29 @@ export default function ProfileCard({ name, desc, instagramLink }: { name: strin
             backgroundSize: "cover",
           }}
         />
-        <div className="absolute inset-0 rounded-full border-2 border-white/30" />
+        <div
+          className="absolute inset-0 rounded-full border-2"
+          style={{
+            borderColor: "rgba(222, 176, 78, 0.4)",
+          }}
+        />
       </div>
 
       {/* Name Section */}
       <div className="profile-name text-center space-y-2 w-full max-w-[360px] mx-auto px-2">
         <h1
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-blue-400 tracking-wide leading-tight"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-wide leading-tight"
           style={{
             fontSize: "clamp(1.25rem, 5vw, 2rem)",
             lineHeight: "1.1",
             wordSpacing: "0.1em",
+            color: "#deb04e",
           }}
         >
           <span
             className="drop-shadow-lg block whitespace-nowrap"
             style={{
-              textShadow: "1px 1px 3px rgba(255,255,255,0.8), 2px 2px 4px rgba(0,0,0,0.3)",
+              textShadow: "1px 1px 3px rgba(222,176,78,0.8), 2px 2px 4px rgba(0,0,0,0.3)",
               minWidth: "max-content",
             }}
           >
@@ -65,9 +76,30 @@ export default function ProfileCard({ name, desc, instagramLink }: { name: strin
           </span>
         </h1>
 
-        {/* Instagram Link */}
+        {/* Instagram Link - Fixed clickability issues */}
         {instagramLink && (
-          <a href={instagramLink} target="_blank" rel="noopener noreferrer" className="profile-instagram flex items-center justify-center gap-2 text-gray-600 hover:text-blue-400 transition-colors duration-300 mt-3">
+          <a
+            href={instagramLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="profile-instagram flex items-center justify-center gap-2 text-gray-600 transition-colors duration-300 mt-3 cursor-pointer relative z-10"
+            style={{
+              pointerEvents: "auto",
+              touchAction: "manipulation",
+              color: "#cd853f",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "#deb04e";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = "#cd853f";
+            }}
+            onClick={(e) => {
+              console.log("[v0] Instagram link clicked:", instagramLink);
+              // Ensure the link works by preventing any interference
+              e.stopPropagation();
+            }}
+          >
             <Instagram className="w-5 h-5" />
             <span className="text-sm">@{name.split(" ")[0].toLowerCase()}</span>
           </a>
@@ -90,7 +122,9 @@ export default function ProfileCard({ name, desc, instagramLink }: { name: strin
 
       {/* Description */}
       <div className="profile-description max-w-[300px] text-center mt-2">
-        <p className="font-light text-gray-600 leading-relaxed text-sm px-2">{desc}</p>
+        <p className="font-light leading-relaxed text-sm px-2" style={{ color: "#cd853f" }}>
+          {desc}
+        </p>
       </div>
     </div>
   );
