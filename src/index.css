@@ -2,85 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-/* MINANG THEME - HITAM & COKLAT KEEMASAN */
+/* BACKGROUND HITAM DAN FONT GOLD - GLOBAL OVERRIDE */
 html {
   color-scheme: dark !important;
   -webkit-color-scheme: dark !important;
-  background-color: #1a1a1a !important; /* Hitam */
+  background-color: #000000 !important;
+  color: #D4AF37 !important; /* Gold color */
 }
 
 body {
   font-family: "Comic Neue", cursive;
   color-scheme: dark !important;
   -webkit-color-scheme: dark !important;
-  background-color: #1a1a1a !important; /* Hitam */
-  color: #cd853f !important; /* Default coklat keemasan untuk semua text */
+  background-color: #000000 !important;
+  color: #D4AF37 !important; /* Gold color */
 }
 
-/* Minang color variables - Coklat Keemasan */
-:root {
-  --minang-50: #fdf6e3;   /* Krem sangat terang */
-  --minang-100: #f7e6c4;  /* Krem terang */
-  --minang-200: #f0d49c;  /* Krem */
-  --minang-300: #e8c275;  /* Coklat muda keemasan */
-  --minang-400: #deb04e;  /* Coklat keemasan */
-  --minang-500: #cd853f;  /* Coklat keemasan klasik */
-  --minang-600: #b8762d;  /* Coklat keemasan tua */
-  --minang-700: #9d5f1b;  /* Coklat tua */
-  --minang-800: #7d4a14;  /* Coklat sangat tua */
-  --minang-900: #5d3510;  /* Coklat gelap */
-  
-  /* Background hitam variations */
-  --black-50: #f7f7f7;
-  --black-100: #e3e3e3;
-  --black-200: #c8c8c8;
-  --black-300: #a4a4a4;
-  --black-400: #818181;
-  --black-500: #666666;
-  --black-600: #515151;
-  --black-700: #434343;
-  --black-800: #2a2a2a;
-  --black-900: #1a1a1a;
+#root {
+  background-color: #000000 !important;
+  color: #D4AF37 !important; /* Gold color */
 }
 
-/* Override semua text color menjadi coklat keemasan */
+/* Override global untuk semua text menjadi gold */
 * {
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold color untuk semua elemen */
 }
 
-/* Background hitam untuk semua elemen */
-body, html {
-  background-color: var(--black-900) !important;
+/* Override khusus untuk elemen tertentu yang perlu gold */
+h1, h2, h3, h4, h5, h6, p, span, div, a, li, td, th, label {
+  color: #D4AF37 !important; /* Gold color */
 }
 
-/* Specific coklat keemasan color overrides */
-h1, h2, h3, h4, h5, h6 {
-  color: var(--minang-400) !important; /* Lebih terang untuk heading */
-}
+/* Override untuk dark mode dan light mode - paksa hitam background dengan font gold */
+@media (prefers-color-scheme: dark), 
+@media (prefers-color-scheme: light) {
+  html, body, #root {
+    color-scheme: dark !important;
+    -webkit-color-scheme: dark !important;
+    background-color: #000000 !important;
+    color: #D4AF37 !important;
+  }
 
-p {
-  color: var(--minang-500) !important;
-}
+  * {
+    color: #D4AF37 !important;
+  }
 
-span {
-  color: var(--minang-500) !important;
-}
+  /* Pastikan warna Tailwind disesuaikan dengan tema gold */
+  .bg-white {
+    background-color: #000000 !important;
+  }
 
-div {
-  color: var(--minang-500) !important;
-}
+  .text-black {
+    color: #D4AF37 !important; /* Gold instead of white */
+  }
 
-/* Override untuk elemen dengan background putih menjadi hitam */
-.bg-white {
-  background-color: var(--black-900) !important;
-}
+  .text-white {
+    color: #D4AF37 !important; /* Gold instead of white */
+  }
 
-.bg-gray-50 {
-  background-color: var(--black-800) !important;
-}
+  .text-gray-700 {
+    color: #D4AF37 !important; /* Gold */
+  }
 
-.bg-gray-100 {
-  background-color: var(--black-700) !important;
+  .text-gray-600 {
+    color: #D4AF37 !important; /* Gold */
+  }
+
+  .text-gray-500 {
+    color: #D4AF37 !important; /* Gold */
+  }
+
+  .text-gray-400 {
+    color: #D4AF37 !important; /* Gold */
+  }
+
+  .text-blue-400 {
+    color: #D4AF37 !important; /* Gold */
+  }
 }
 
 /* Override untuk input dan form elements */
@@ -90,42 +88,37 @@ select,
 button {
   color-scheme: dark !important;
   -webkit-color-scheme: dark !important;
-  color: var(--minang-500) !important;
-  background-color: var(--black-800) !important;
-  border-color: var(--minang-600) !important;
+  color: #D4AF37 !important; /* Gold color untuk form elements */
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: var(--minang-300) !important;
+/* Override untuk placeholder text */
+::placeholder {
+  color: #B8860B !important; /* Darker gold untuk placeholder */
 }
 
-/* Override untuk scrollbar dengan coklat keemasan accent */
+/* Override untuk scrollbar */
 ::-webkit-scrollbar {
-  background-color: var(--black-900) !important;
+  background-color: #000000 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--minang-600) !important;
+  background-color: #D4AF37 !important; /* Gold scrollbar thumb */
 }
 
-/* Animasi dengan warna coklat keemasan */
-.Rudi-animate {
+/* Animasi sederhana tanpa particle effects */
+.wila-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
-  color: var(--minang-400) !important;
 }
 
 .dan-animate {
   opacity: 0;
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
-  color: var(--minang-500) !important;
 }
 
-.Wila-animate {
+.rudi-animate {
   opacity: 0;
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
-  color: var(--minang-400) !important;
 }
 
 @keyframes fadeInUp {
@@ -171,10 +164,10 @@ textarea::placeholder {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background-color: var(--black-800) !important;
+  @apply bg-gray-800;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: var(--minang-600) !important;
+  background-color: #D4AF37 !important; /* Gold scrollbar */
   border-radius: 9999px;
 }
 
@@ -183,10 +176,11 @@ textarea::placeholder {
 }
 
 .comment-scrollbar::-webkit-scrollbar-track {
-  background-color: var(--black-900) !important;
+  @apply bg-gray-900;
 }
 .comment-scrollbar::-webkit-scrollbar-thumb {
-  background-color: var(--minang-500) !important;
+  background-color: #D4AF37 !important; /* Gold */
+  border-radius: 9999px;
 }
 
 .hidden-scrollbar {
@@ -211,28 +205,28 @@ textarea::placeholder {
   font-size: 15px;
   font-family: Besley-VariableFont_wght;
   line-height: 1.2;
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 .besley-15 {
   font-weight: 300;
   font-size: 20px;
   font-family: Besley-VariableFont_wght;
   line-height: 1.2;
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 .latin-20 {
   font-weight: 300;
   font-size: 40px;
   font-family: GreatVibes-Regular;
   line-height: 1.2;
-  color: var(--minang-400) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 .latin-25 {
   font-weight: 300;
   font-size: 45px;
   font-family: GreatVibes-Regular;
   line-height: 1.2;
-  color: var(--minang-400) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 
 /* For Chrome, Safari, Edge, and Opera */
@@ -251,7 +245,7 @@ input[type="number"] {
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 
 .steps {
@@ -259,7 +253,7 @@ input[type="number"] {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 
 @keyframes typing {
@@ -276,39 +270,38 @@ input[type="number"] {
 }
 
 /* Optimasi Performa untuk Scroll dan Animasi */
-.rudi-animate,
+/* Gunakan GPU acceleration untuk elemen yang beranimasi */
+.wila-animate,
 .dan-animate,
-.wila-animate {
+.rudi-animate {
   opacity: 0;
   will-change: opacity, transform;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); /* Force GPU layer */
+  color: #D4AF37 !important; /* Gold */
 }
 
-.rudi-animate {
+.wila-animate {
   animation: fadeInUp 1.2s ease-out 0.5s forwards;
-  color: var(--minang-400) !important;
 }
 
 .dan-animate {
   animation: fadeInScale 0.8s ease-out 1.8s forwards;
-  color: var(--minang-500) !important;
 }
 
-.wila-animate {
+.rudi-animate {
   animation: fadeInUp 1.2s ease-out 2.5s forwards;
-  color: var(--minang-400) !important;
 }
 
 /* Smooth scrolling untuk seluruh halaman */
 html {
-  scroll-behavior: auto;
+  scroll-behavior: auto; /* Matikan default smooth scroll */
 }
 
 /* Optimasi untuk elemen yang sering berubah */
 [class*="motion-"] {
   will-change: transform, opacity;
   transform: translate3d(0, 0, 0);
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 
 /* Optimasi untuk gambar */
@@ -320,9 +313,9 @@ img {
 
 /* Reduce motion untuk user yang prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  .rudi-animate,
+  .wila-animate,
   .dan-animate,
-  .wila-animate {
+  .rudi-animate {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
@@ -338,134 +331,25 @@ img {
 /* Optimasi countdown yang update setiap detik */
 [class*="countdown"] {
   contain: layout style paint;
-  color: var(--minang-500) !important;
+  color: #D4AF37 !important; /* Gold */
 }
 
-/* Minang coklat keemasan text utilities */
-.text-minang-50 { color: var(--minang-50) !important; }
-.text-minang-100 { color: var(--minang-100) !important; }
-.text-minang-200 { color: var(--minang-200) !important; }
-.text-minang-300 { color: var(--minang-300) !important; }
-.text-minang-400 { color: var(--minang-400) !important; }
-.text-minang-500 { color: var(--minang-500) !important; }
-.text-minang-600 { color: var(--minang-600) !important; }
-.text-minang-700 { color: var(--minang-700) !important; }
-.text-minang-800 { color: var(--minang-800) !important; }
-.text-minang-900 { color: var(--minang-900) !important; }
-
-/* Background hitam utilities */
-.bg-black-50 { background-color: var(--black-50) !important; }
-.bg-black-100 { background-color: var(--black-100) !important; }
-.bg-black-200 { background-color: var(--black-200) !important; }
-.bg-black-300 { background-color: var(--black-300) !important; }
-.bg-black-400 { background-color: var(--black-400) !important; }
-.bg-black-500 { background-color: var(--black-500) !important; }
-.bg-black-600 { background-color: var(--black-600) !important; }
-.bg-black-700 { background-color: var(--black-700) !important; }
-.bg-black-800 { background-color: var(--black-800) !important; }
-.bg-black-900 { background-color: var(--black-900) !important; }
-
-/* Override untuk link dan button text */
-a {
-  color: var(--minang-400) !important;
-}
-
-a:hover {
-  color: var(--minang-300) !important;
-}
-
-button {
-  color: var(--minang-500) !important;
-  background-color: var(--black-800) !important;
-  border-color: var(--minang-600) !important;
-}
-
-button:hover {
-  background-color: var(--black-700) !important;
-  color: var(--minang-400) !important;
-}
-
-/* Override untuk semua Tailwind text utilities menjadi coklat keemasan */
-.text-white { color: var(--minang-100) !important; }
-.text-black { color: var(--minang-900) !important; }
-.text-gray-50 { color: var(--minang-200) !important; }
-.text-gray-100 { color: var(--minang-300) !important; }
-.text-gray-200 { color: var(--minang-400) !important; }
-.text-gray-300 { color: var(--minang-500) !important; }
-.text-gray-400 { color: var(--minang-600) !important; }
-.text-gray-500 { color: var(--minang-500) !important; }
-.text-gray-600 { color: var(--minang-400) !important; }
-.text-gray-700 { color: var(--minang-300) !important; }
-.text-gray-800 { color: var(--minang-200) !important; }
-.text-gray-900 { color: var(--minang-100) !important; }
-
-/* Override untuk blue colors menjadi coklat keemasan */
-.text-blue-50 { color: var(--minang-200) !important; }
-.text-blue-100 { color: var(--minang-300) !important; }
-.text-blue-200 { color: var(--minang-400) !important; }
-.text-blue-300 { color: var(--minang-500) !important; }
-.text-blue-400 { color: var(--minang-600) !important; }
-.text-blue-500 { color: var(--minang-500) !important; }
-.text-blue-600 { color: var(--minang-400) !important; }
-.text-blue-700 { color: var(--minang-300) !important; }
-.text-blue-800 { color: var(--minang-200) !important; }
-.text-blue-900 { color: var(--minang-100) !important; }
-
-/* Override untuk yellow/gold colors menjadi coklat keemasan */
-.text-yellow-50 { color: var(--minang-100) !important; }
-.text-yellow-100 { color: var(--minang-200) !important; }
-.text-yellow-200 { color: var(--minang-300) !important; }
-.text-yellow-300 { color: var(--minang-400) !important; }
-.text-yellow-400 { color: var(--minang-500) !important; }
-.text-yellow-500 { color: var(--minang-600) !important; }
-.text-yellow-600 { color: var(--minang-500) !important; }
-.text-yellow-700 { color: var(--minang-400) !important; }
-.text-yellow-800 { color: var(--minang-300) !important; }
-.text-yellow-900 { color: var(--minang-200) !important; }
-
-/* Background overrides */
-.bg-yellow-100 { background-color: var(--black-800) !important; }
-.bg-yellow-50 { background-color: var(--black-700) !important; }
-.bg-gray-100 { background-color: var(--black-800) !important; }
-.bg-gray-50 { background-color: var(--black-700) !important; }
-
-/* Card dan container backgrounds */
-.bg-white {
-  background-color: var(--black-900) !important;
-}
-
-/* Border colors dengan coklat keemasan */
-.border-gray-200 { border-color: var(--minang-700) !important; }
-.border-gray-300 { border-color: var(--minang-600) !important; }
-.border-yellow-200 { border-color: var(--minang-600) !important; }
-.border-yellow-300 { border-color: var(--minang-500) !important; }
-
-/* Shadow dengan nuansa coklat keemasan */
-.shadow-lg {
-  box-shadow: 0 10px 15px -3px rgba(205, 133, 63, 0.1), 0 4px 6px -2px rgba(205, 133, 63, 0.05) !important;
-}
-
-.shadow-md {
-  box-shadow: 0 4px 6px -1px rgba(205, 133, 63, 0.1), 0 2px 4px -1px rgba(205, 133, 63, 0.06) !important;
-}
-
-/* Sembunyikan div dengan class font-preload yang berisi "Wila & Rudi" */
+/* Sembunyikan div dengan class font-preload yang berisi "Rudi & Wila" */
 .font-preload {
   display: none !important;
 }
 
-/* Override untuk elemen yang mungkin memiliki background terang */
-[class*="bg-white"],
-[class*="bg-gray-50"],
-[class*="bg-gray-100"],
-[class*="bg-yellow-50"],
-[class*="bg-yellow-100"] {
-  background-color: var(--black-900) !important;
+/* Override khusus untuk button text */
+button {
+  color: #D4AF37 !important; /* Gold untuk semua button */
 }
 
-/* Ensure cards and modals have dark background */
-.modal, .card, .popup {
-  background-color: var(--black-800) !important;
-  color: var(--minang-500) !important;
-  border-color: var(--minang-600) !important;
+/* Override untuk SVG icons agar terlihat */
+svg {
+  color: inherit !important;
+}
+
+/* Special override untuk link dan interactive elements */
+a, a:hover, a:visited {
+  color: #D4AF37 !important; /* Gold */
 }
