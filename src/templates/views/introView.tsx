@@ -1,7 +1,7 @@
 "use client";
 
-import Rudi from "../../assets/rudi";
 import Wila from "../../assets/wila";
+import Rudi from "../../assets/rudi";
 import Dan from "../../assets/dan";
 import { motion } from "framer-motion";
 
@@ -14,11 +14,11 @@ export default function IntroView() {
         display: "none",
         transition: { delay: 4.5, duration: 1 },
       }}
-      className="absolute w-full h-[100dvh] flex justify-center bg-gray-200 overflow-hidden"
+      className="absolute w-full h-[100dvh] flex justify-center bg-black overflow-hidden"
     >
       <div className="absolute max-w-xl w-full p-5 h-[100dvh] flex flex-col justify-center">
         <div className="relative h-[100dvh] flex flex-col justify-center items-center gap-6">
-          {/* Animasi  - muncul pertama dengan smooth animation */}
+          {/* Animasi Rudi - muncul pertama dengan smooth animation */}
           <motion.div
             className="w-full max-w-[300px] flex justify-center"
             initial={{ opacity: 0, y: 30, scale: 0.8 }}
