@@ -84,7 +84,7 @@ export default function Introduction({ refBride }: { refBride: any; windowWidth:
         <p className="text-gray-600 mb-6">Kami yang berbahagia,</p>
 
         {/* Simplified Profile Cards - No complex refs */}
-        <ProfileCard name="Wila Novita Sari, AM.d" desc="Putri tunggal dari Bapak Jusrul (Alm.) dan Ibu Desmaini" />
+        <ProfileCard name="Wila Novita Sari, A.Md." desc="Putri tunggal dari Bapak Jusrul (Alm.) dan Ibu Desmaini" />
 
         <ProfileCard name="Rudi Mardiansah" desc="Putra kedua dari Bapak Hamdaniwal dan Ibu Lina Fitri Yeni" />
 
