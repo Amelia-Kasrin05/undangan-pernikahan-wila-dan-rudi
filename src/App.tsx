@@ -11,7 +11,7 @@ import RsvpAdmin from "./templates/views/rsvpAdmin";
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const audioDownload = new Audio("/audio/padusi.mp3");
+  const audioDownload = new Audio("/audio/Randy Chow - Urang Minang Baralek Gadang.mp3");
   const audioRef = useRef<HTMLAudioElement | null>(null);
   function preloadAudio(audioElement: HTMLAudioElement) {
     return new Promise((resolve, reject) => {
@@ -99,7 +99,7 @@ function App() {
               {/* <audio
                 ref={audio}
                 id="audio"
-                src="/audio/padusi.mp3"
+                src="/audio/Randy Chow - Urang Minang Baralek Gadang.mp3"
                 loop
               >
                 Your browser does not support the audio element.
