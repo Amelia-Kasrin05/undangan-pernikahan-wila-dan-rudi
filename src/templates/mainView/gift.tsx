@@ -66,7 +66,7 @@ export default function Gift() {
               </svg>
               <p className="text-amber-700 font-semibold">Alamat Pengiriman Kado</p>
             </div>
-            <p className="text-gray-700 leading-relaxed">Wila, Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang.</p>
+            <p className="text-gray-700 leading-relaxed">Wila, Jalan Perwira 1 No. 41 RT 02 RW 09 Katanahan, Kayu Kalek, SMA N 8 Padang, Kota Padang.</p>
           </motion.div>
         </div>
       </motion.div>
