@@ -8,7 +8,7 @@ import useVisibility from "../../services/hooks/useVisibility";
 import CountdownCard from "../components/countdownCard";
 import { motion } from "framer-motion";
 
-export default function Introduction({ refBride,  }: { refBride: any; windowWidth: number }) {
+export default function Introduction({ refBride }: { refBride: any; windowWidth: number }) {
   const bismillah = useVisibility();
   const countdown = useVisibility();
   const button = useVisibility();
@@ -72,17 +72,8 @@ export default function Introduction({ refBride,  }: { refBride: any; windowWidt
 
   return (
     <MainLayout>
-      <motion.div
-        ref={mergedRef}
-        className="relative flex justify-center items-center w-full mb-6 text-center px-4"
-        animate={
-          bismillah.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }
-        }
-        transition={{ duration: 0.7 }}
-      >
-        <h1 className="font-bold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl z-10 relative leading-relaxed whitespace-nowrap">
-          بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-        </h1>
+      <motion.div ref={mergedRef} className="relative flex justify-center items-center w-full mb-6 text-center px-4" animate={bismillah.isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }} transition={{ duration: 0.7 }}>
+        <h1 className="font-bold text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl z-10 relative leading-relaxed whitespace-nowrap">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h1>
       </motion.div>
 
       <div className="text-center flex flex-col items-center px-4">
@@ -93,9 +84,9 @@ export default function Introduction({ refBride,  }: { refBride: any; windowWidt
         <p className="text-gray-600 mb-6">Kami yang berbahagia,</p>
 
         {/* Simplified Profile Cards - No complex refs */}
-        <ProfileCard name="Wila Novita Sari, AM.d" desc="Anak ke-1 putri tunggal dari Bapak Jusrul (Alm.) dan Ibu Desmaini" />
+        <ProfileCard name="Wila Novita Sari, AM.d" desc="Putri tunggal dari Bapak Jusrul (Alm.) dan Ibu Desmaini" />
 
-        <ProfileCard name="Rudi Mardiansah" desc="Anak ke-2 putra dari Bapak Hamdaniwal dan Ibu Lina Fitri Yeni" />
+        <ProfileCard name="Rudi Mardiansah" desc="Putra kedua dari Bapak Hamdaniwal dan Ibu Lina Fitri Yeni" />
 
         <footer className="mx-5 mt-10 flex flex-col gap-10">
           <p className="text-gray-600 text-lg sm:text-xl md:text-2xl font-medium">Minggu, 21 September 2025</p>
@@ -117,7 +108,7 @@ export default function Introduction({ refBride,  }: { refBride: any; windowWidt
             className="group relative px-8 py-4 text-white font-semibold rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-300 overflow-hidden active:scale-95"
             style={{
               background: "linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 25%, #434343 50%, #1a1a1a 75%, #2a2a2a 100%)",
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)"
+              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(68, 68, 68, 0.3)",
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.background = "linear-gradient(135deg, #D4AF37 0%, #FFD700 25%, #B8860B 50%, #FFD700 75%, #D4AF37 100%)";
@@ -132,12 +123,12 @@ export default function Introduction({ refBride,  }: { refBride: any; windowWidt
           >
             {/* Shimmer effect - lebih terlihat pada background gelap */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-            
+
             <div className="relative flex items-center justify-center gap-3">
               <img src="/calendar.png" alt="Calendar" className="w-5 h-5 drop-shadow-sm transition-all duration-300" />
               <span className="text-lg font-bold drop-shadow-sm transition-colors duration-300">Ingatkan via Google Kalender</span>
             </div>
-            
+
             {/* Glow effect yang berubah saat hover */}
             <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-gray-600/20 to-gray-700/20 group-hover:from-yellow-400/20 group-hover:to-amber-400/20 blur-sm group-hover:blur-md transition-all duration-300" />
           </motion.button>
